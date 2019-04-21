@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+      http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+      http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd">
+
+
+    <!-- 配置自动扫描的包 -->
+    <context:component-scan base-package="com.e3"></context:component-scan>
+
+    <!-- 读入配置属性文件 -->
+    <context:property-placeholder location="
+classpath:system.properties"/>
+
+
+    <!-- proxy-target-class默认"false",更改为"ture"使用CGLib动态代理 -->
+    <aop:aspectj-autoproxy proxy-target-class="true" />
+
+    <bean id="freemarkerConfig" class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+        <property name="templateLoaderPath" value="WEB-INF/ftl"/>
+        <property name="defaultEncoding" value="UTF-8"/>
+    </bean>
+
+      <import resource="classpath:dubbo/spring-dubbo-consumer.xml"/>
+    <import resource="classpath:jedis-client.xml"/>
+    <bean id="schedule1" class="com.e3.web.jobs.TestQuartz"/>
+    <bean id="SpringQtzJobMethod" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject">
+            <ref bean="schedule1"/>
+        </property>
+        <property name="targetMethod">
+            <value>executeQuartz</value>
+        </property>
+    </bean>
+    <bean id="cronTriggerFactoryBean" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="jobDetail" ref="SpringQtzJobMethod"/>
+        <property name="cronExpression" value="0/5 * * * * ?"/>
+    </bean>
+    <bean id="SpringJobSchedulerFactoryBean" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="triggers">
+            <ref bean="cronTriggerFactoryBean"/>
+        </property>
+    </bean>
+</beans>

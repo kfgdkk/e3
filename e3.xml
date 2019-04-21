@@ -1,0 +1,1207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="e3" default="all">
+  
+  
+  <property file="e3.properties"/>
+  <!-- Uncomment the following property if no tests compilation is needed -->
+  <!-- 
+  <property name="skip.tests" value="true"/>
+   -->
+  
+  <!-- Compiler options -->
+  
+  <property name="compiler.debug" value="on"/>
+  <property name="compiler.generate.no.warnings" value="off"/>
+  <property name="compiler.args" value=""/>
+  <property name="compiler.max.memory" value="700m"/>
+  <patternset id="ignored.files">
+    <exclude name="**/*.hprof/**"/>
+    <exclude name="**/*.pyc/**"/>
+    <exclude name="**/*.pyo/**"/>
+    <exclude name="**/*.rbc/**"/>
+    <exclude name="**/*.yarb/**"/>
+    <exclude name="**/*~/**"/>
+    <exclude name="**/.DS_Store/**"/>
+    <exclude name="**/.git/**"/>
+    <exclude name="**/.hg/**"/>
+    <exclude name="**/.svn/**"/>
+    <exclude name="**/CVS/**"/>
+    <exclude name="**/__pycache__/**"/>
+    <exclude name="**/_svn/**"/>
+    <exclude name="**/vssver.scc/**"/>
+    <exclude name="**/vssver2.scc/**"/>
+  </patternset>
+  <patternset id="library.patterns">
+    <include name="*.klib"/>
+    <include name="*.egg"/>
+    <include name="*.jar"/>
+    <include name="*.ear"/>
+    <include name="*.swc"/>
+    <include name="*.war"/>
+    <include name="*.zip"/>
+    <include name="*.ane"/>
+  </patternset>
+  <patternset id="compiler.resources">
+    <exclude name="**/?*.java"/>
+    <exclude name="**/?*.form"/>
+    <exclude name="**/?*.class"/>
+    <exclude name="**/?*.groovy"/>
+    <exclude name="**/?*.scala"/>
+    <exclude name="**/?*.flex"/>
+    <exclude name="**/?*.kt"/>
+    <exclude name="**/?*.clj"/>
+    <exclude name="**/?*.aj"/>
+  </patternset>
+  
+  <!-- JDK definitions -->
+  
+  <property name="jdk.bin.1.8" value="${jdk.home.1.8}/bin"/>
+  <path id="jdk.classpath.1.8">
+    <fileset dir="${jdk.home.1.8}">
+      <include name="jre/lib/charsets.jar"/>
+      <include name="jre/lib/deploy.jar"/>
+      <include name="jre/lib/ext/access-bridge-64.jar"/>
+      <include name="jre/lib/ext/cldrdata.jar"/>
+      <include name="jre/lib/ext/dnsns.jar"/>
+      <include name="jre/lib/ext/jaccess.jar"/>
+      <include name="jre/lib/ext/jfxrt.jar"/>
+      <include name="jre/lib/ext/localedata.jar"/>
+      <include name="jre/lib/ext/nashorn.jar"/>
+      <include name="jre/lib/ext/sunec.jar"/>
+      <include name="jre/lib/ext/sunjce_provider.jar"/>
+      <include name="jre/lib/ext/sunmscapi.jar"/>
+      <include name="jre/lib/ext/sunpkcs11.jar"/>
+      <include name="jre/lib/ext/zipfs.jar"/>
+      <include name="jre/lib/javaws.jar"/>
+      <include name="jre/lib/jce.jar"/>
+      <include name="jre/lib/jfr.jar"/>
+      <include name="jre/lib/jfxswt.jar"/>
+      <include name="jre/lib/jsse.jar"/>
+      <include name="jre/lib/management-agent.jar"/>
+      <include name="jre/lib/plugin.jar"/>
+      <include name="jre/lib/resources.jar"/>
+      <include name="jre/lib/rt.jar"/>
+    </fileset>
+  </path>
+  
+  <property name="project.jdk.home" value="${jdk.home.1.8}"/>
+  <property name="project.jdk.bin" value="${jdk.bin.1.8}"/>
+  <property name="project.jdk.classpath" value="jdk.classpath.1.8"/>
+  
+  
+  <!-- Project Libraries -->
+  
+  <path id="library.maven:_c3p0:c3p0:0.9.1.1.classpath">
+    <pathelement location="${basedir}/../repository/c3p0/c3p0/0.9.1.1/c3p0-0.9.1.1.jar"/>
+  </path>
+  
+  <path id="library.maven:_com.101tec:zkclient:0.10.classpath">
+    <pathelement location="${basedir}/../repository/com/101tec/zkclient/0.10/zkclient-0.10.jar"/>
+  </path>
+  
+  <path id="library.maven:_com.alibaba:druid:1.0.29.classpath">
+    <pathelement location="${basedir}/../repository/com/alibaba/druid/1.0.29/druid-1.0.29.jar"/>
+  </path>
+  
+  <path id="library.maven:_com.alibaba:dubbo:2.5.3.classpath">
+    <pathelement location="${basedir}/../repository/com/alibaba/dubbo/2.5.3/dubbo-2.5.3.jar"/>
+  </path>
+  
+  <path id="library.maven:_com.fasterxml.jackson.core:jackson-annotations:2.8.7.classpath">
+    <pathelement location="${basedir}/../repository/com/fasterxml/jackson/core/jackson-annotations/2.8.7/jackson-annotations-2.8.7.jar"/>
+  </path>
+  
+  <path id="library.maven:_com.fasterxml.jackson.core:jackson-core:2.8.7.classpath">
+    <pathelement location="${basedir}/../repository/com/fasterxml/jackson/core/jackson-core/2.8.7/jackson-core-2.8.7.jar"/>
+  </path>
+  
+  <path id="library.maven:_com.fasterxml.jackson.core:jackson-databind:2.8.7.classpath">
+    <pathelement location="${basedir}/../repository/com/fasterxml/jackson/core/jackson-databind/2.8.7/jackson-databind-2.8.7.jar"/>
+  </path>
+  
+  <path id="library.maven:_com.github.jsqlparser:jsqlparser:0.9.4.classpath">
+    <pathelement location="${basedir}/../repository/com/github/jsqlparser/jsqlparser/0.9.4/jsqlparser-0.9.4.jar"/>
+  </path>
+  
+  <path id="library.maven:_com.github.miemiedev:mybatis-paginator:1.2.15.classpath">
+    <pathelement location="${basedir}/../repository/com/github/miemiedev/mybatis-paginator/1.2.15/mybatis-paginator-1.2.15.jar"/>
+  </path>
+  
+  <path id="library.maven:_com.github.pagehelper:pagehelper:4.1.0.classpath">
+    <pathelement location="${basedir}/../repository/com/github/pagehelper/pagehelper/4.1.0/pagehelper-4.1.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_commons-codec:commons-codec:1.6.classpath">
+    <pathelement location="${basedir}/../repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar"/>
+  </path>
+  
+  <path id="library.maven:_commons-fileupload:commons-fileupload:1.3.2.classpath">
+    <pathelement location="${basedir}/../repository/commons-fileupload/commons-fileupload/1.3.2/commons-fileupload-1.3.2.jar"/>
+  </path>
+  
+  <path id="library.maven:_commons-io:commons-io:1.3.2.classpath">
+    <pathelement location="${basedir}/../repository/commons-io/commons-io/1.3.2/commons-io-1.3.2.jar"/>
+  </path>
+  
+  <path id="library.maven:_commons-logging:commons-logging:1.1.3.classpath">
+    <pathelement location="${basedir}/../repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar"/>
+  </path>
+  
+  <path id="library.maven:_commons-net:commons-net:3.3.classpath">
+    <pathelement location="${basedir}/../repository/commons-net/commons-net/3.3/commons-net-3.3.jar"/>
+  </path>
+  
+  <path id="library.maven:_fastdfs_client:fastdfs_client:1.25.classpath">
+    <pathelement location="${basedir}/../repository/fastdfs_client/fastdfs_client/1.25/fastdfs_client-1.25.jar"/>
+  </path>
+  
+  <path id="library.maven:_io.netty:netty:3.7.0.final.classpath">
+    <pathelement location="${basedir}/../repository/io/netty/netty/3.7.0.Final/netty-3.7.0.Final.jar"/>
+  </path>
+  
+  <path id="library.maven:_javax.servlet.jsp.jstl:jstl:1.2.classpath">
+    <pathelement location="${basedir}/../repository/javax/servlet/jsp/jstl/jstl/1.2/jstl-1.2.jar"/>
+  </path>
+  
+  <path id="library.maven:_javax.servlet.jsp:javax.servlet.jsp-api:2.3.1.classpath">
+    <pathelement location="${basedir}/../repository/javax/servlet/jsp/javax.servlet.jsp-api/2.3.1/javax.servlet.jsp-api-2.3.1.jar"/>
+  </path>
+  
+  <path id="library.maven:_javax.servlet:javax.servlet-api:3.1.0.classpath">
+    <pathelement location="${basedir}/../repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_jline:jline:0.9.94.classpath">
+    <pathelement location="${basedir}/../repository/jline/jline/0.9.94/jline-0.9.94.jar"/>
+  </path>
+  
+  <path id="library.maven:_junit:junit:4.11.classpath">
+    <pathelement location="${basedir}/../repository/junit/junit/4.11/junit-4.11.jar"/>
+  </path>
+  
+  <path id="library.maven:_junit:junit:4.12.classpath">
+    <pathelement location="${basedir}/../repository/junit/junit/4.12/junit-4.12.jar"/>
+  </path>
+  
+  <path id="library.maven:_log4j:log4j:1.2.17.classpath">
+    <pathelement location="${basedir}/../repository/log4j/log4j/1.2.17/log4j-1.2.17.jar"/>
+  </path>
+  
+  <path id="library.maven:_mysql:mysql-connector-java:5.1.42.classpath">
+    <pathelement location="${basedir}/../repository/mysql/mysql-connector-java/5.1.42/mysql-connector-java-5.1.42.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.activemq:activemq-all:5.15.0.classpath">
+    <pathelement location="${basedir}/../repository/org/apache/activemq/activemq-all/5.15.0/activemq-all-5.15.0.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.commons:commons-lang3:3.3.2.classpath">
+    <pathelement location="${basedir}/../repository/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.commons:commons-pool2:2.4.2.classpath">
+    <pathelement location="${basedir}/../repository/org/apache/commons/commons-pool2/2.4.2/commons-pool2-2.4.2.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.httpcomponents:httpclient:4.3.5.classpath">
+    <pathelement location="${basedir}/../repository/org/apache/httpcomponents/httpclient/4.3.5/httpclient-4.3.5.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.httpcomponents:httpcore:4.3.2.classpath">
+    <pathelement location="${basedir}/../repository/org/apache/httpcomponents/httpcore/4.3.2/httpcore-4.3.2.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.httpcomponents:httpmime:4.3.1.classpath">
+    <pathelement location="${basedir}/../repository/org/apache/httpcomponents/httpmime/4.3.1/httpmime-4.3.1.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.solr:solr-solrj:4.10.4.classpath">
+    <pathelement location="${basedir}/../repository/org/apache/solr/solr-solrj/4.10.4/solr-solrj-4.10.4.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.apache.zookeeper:zookeeper:3.4.8.classpath">
+    <pathelement location="${basedir}/../repository/org/apache/zookeeper/zookeeper/3.4.8/zookeeper-3.4.8.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.aspectj:aspectjrt:1.8.10.classpath">
+    <pathelement location="${basedir}/../repository/org/aspectj/aspectjrt/1.8.10/aspectjrt-1.8.10.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.aspectj:aspectjweaver:1.8.10.classpath">
+    <pathelement location="${basedir}/../repository/org/aspectj/aspectjweaver/1.8.10/aspectjweaver-1.8.10.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.codehaus.woodstox:wstx-asl:3.2.7.classpath">
+    <pathelement location="${basedir}/../repository/org/codehaus/woodstox/wstx-asl/3.2.7/wstx-asl-3.2.7.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.freemarker:freemarker:2.3.26-incubating.classpath">
+    <pathelement location="${basedir}/../repository/org/freemarker/freemarker/2.3.26-incubating/freemarker-2.3.26-incubating.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.hamcrest:hamcrest-core:1.3.classpath">
+    <pathelement location="${basedir}/../repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.javassist:javassist:3.15.0-ga.classpath">
+    <pathelement location="${basedir}/../repository/org/javassist/javassist/3.15.0-GA/javassist-3.15.0-GA.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.jboss.netty:netty:3.2.5.final.classpath">
+    <pathelement location="${basedir}/../repository/org/jboss/netty/netty/3.2.5.Final/netty-3.2.5.Final.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.mybatis:mybatis-spring:1.3.1.classpath">
+    <pathelement location="${basedir}/../repository/org/mybatis/mybatis-spring/1.3.1/mybatis-spring-1.3.1.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.mybatis:mybatis:3.4.4.classpath">
+    <pathelement location="${basedir}/../repository/org/mybatis/mybatis/3.4.4/mybatis-3.4.4.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.noggit:noggit:0.5.classpath">
+    <pathelement location="${basedir}/../repository/org/noggit/noggit/0.5/noggit-0.5.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.quartz-scheduler:quartz:2.2.2.classpath">
+    <pathelement location="${basedir}/../repository/org/quartz-scheduler/quartz/2.2.2/quartz-2.2.2.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.slf4j:slf4j-api:1.6.1.classpath">
+    <pathelement location="${basedir}/../repository/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.slf4j:slf4j-log4j12:1.6.1.classpath">
+    <pathelement location="${basedir}/../repository/org/slf4j/slf4j-log4j12/1.6.1/slf4j-log4j12-1.6.1.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-aop:4.3.7.release.classpath">
+    <pathelement location="${basedir}/../repository/org/springframework/spring-aop/4.3.7.RELEASE/spring-aop-4.3.7.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-beans:4.3.7.release.classpath">
+    <pathelement location="${basedir}/../repository/org/springframework/spring-beans/4.3.7.RELEASE/spring-beans-4.3.7.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-context-support:4.3.7.release.classpath">
+    <pathelement location="${basedir}/../repository/org/springframework/spring-context-support/4.3.7.RELEASE/spring-context-support-4.3.7.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-context:4.3.7.release.classpath">
+    <pathelement location="${basedir}/../repository/org/springframework/spring-context/4.3.7.RELEASE/spring-context-4.3.7.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-core:4.3.7.release.classpath">
+    <pathelement location="${basedir}/../repository/org/springframework/spring-core/4.3.7.RELEASE/spring-core-4.3.7.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-expression:4.3.7.release.classpath">
+    <pathelement location="${basedir}/../repository/org/springframework/spring-expression/4.3.7.RELEASE/spring-expression-4.3.7.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-jdbc:4.3.7.release.classpath">
+    <pathelement location="${basedir}/../repository/org/springframework/spring-jdbc/4.3.7.RELEASE/spring-jdbc-4.3.7.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-jms:4.3.7.release.classpath">
+    <pathelement location="${basedir}/../repository/org/springframework/spring-jms/4.3.7.RELEASE/spring-jms-4.3.7.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-messaging:4.3.7.release.classpath">
+    <pathelement location="${basedir}/../repository/org/springframework/spring-messaging/4.3.7.RELEASE/spring-messaging-4.3.7.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-tx:4.3.7.release.classpath">
+    <pathelement location="${basedir}/../repository/org/springframework/spring-tx/4.3.7.RELEASE/spring-tx-4.3.7.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-web:4.3.7.release.classpath">
+    <pathelement location="${basedir}/../repository/org/springframework/spring-web/4.3.7.RELEASE/spring-web-4.3.7.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-web:5.1.2.release.classpath">
+    <pathelement location="${basedir}/../repository/org/springframework/spring-web/5.1.2.RELEASE/spring-web-5.1.2.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-webmvc:4.3.7.release.classpath">
+    <pathelement location="${basedir}/../repository/org/springframework/spring-webmvc/4.3.7.RELEASE/spring-webmvc-4.3.7.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_org.springframework:spring-webmvc:5.1.2.release.classpath">
+    <pathelement location="${basedir}/../repository/org/springframework/spring-webmvc/5.1.2.RELEASE/spring-webmvc-5.1.2.RELEASE.jar"/>
+  </path>
+  
+  <path id="library.maven:_redis.clients:jedis:2.9.0.classpath">
+    <pathelement location="${basedir}/../repository/redis/clients/jedis/2.9.0/jedis-2.9.0.jar"/>
+  </path>
+  <!-- Register Custom Compiler Taskdefs -->
+  <property name="javac2.home" value="${idea.home}/lib"/>
+  <path id="javac2.classpath">
+    <fileset dir="${javac2.home}">
+      <include name="javac2.jar"/>
+      <include name="jdom.jar"/>
+      <include name="asm-all*.jar"/>
+      <include name="forms-*.jar"/>
+    </fileset>
+  </path>
+  <target name="register.custom.compilers">
+    <taskdef name="javac2" classname="com.intellij.ant.Javac2" classpathref="javac2.classpath"/>
+    <taskdef name="instrumentIdeaExtensions" classname="com.intellij.ant.InstrumentIdeaExtensions" classpathref="javac2.classpath"/>
+  </target>
+  
+  <!-- Modules -->
+  
+  <import file="${basedir}/module_e3.xml"/>
+  
+  <import file="${basedir}/e3-common/module_e3-common.xml"/>
+  
+  <import file="${basedir}/e3-common-config/module_e3-common-config.xml"/>
+  
+  <import file="${basedir}/fastdfs_client/module_fastdfs_client.xml"/>
+  
+  <import file="${basedir}/e3-api-content/module_e3-api-content.xml"/>
+  
+  <import file="${basedir}/e3-api-goods/module_e3-api-goods.xml"/>
+  
+  <import file="${basedir}/e3-api-search/module_e3-api-search.xml"/>
+  
+  <import file="${basedir}/e3-api-user/module_e3-api-user.xml"/>
+  
+  <import file="${basedir}/e3-api-order/module_e3-api-order.xml"/>
+  
+  <import file="${basedir}/e3-service-content/module_e3-service-content.xml"/>
+  
+  <import file="${basedir}/e3-service-goods/module_e3-service-goods.xml"/>
+  
+  <import file="${basedir}/e3-service-search/module_e3-service-search.xml"/>
+  
+  <import file="${basedir}/e3-service-user/module_e3-service-user.xml"/>
+  
+  <import file="${basedir}/e3-web-cart/module_e3-web-cart.xml"/>
+  
+  <import file="${basedir}/e3-web-item/module_e3-web-item.xml"/>
+  
+  <import file="${basedir}/e3-web-manager/module_e3-web-manager.xml"/>
+  
+  <import file="${basedir}/e3-web-portal/module_e3-web-portal.xml"/>
+  
+  <import file="${basedir}/e3-web-search/module_e3-web-search.xml"/>
+  
+  <import file="${basedir}/e3-web-sso/module_e3-web-sso.xml"/>
+  
+  <import file="${basedir}/e3-service-order/module_e3-service-order.xml"/>
+  
+  <import file="${basedir}/e3-web-order/module_e3-web-order.xml"/>
+  
+  <target name="init" description="Build initialization">
+    <!-- Perform any build initialization in this target -->
+  </target>
+  
+  <target name="clean" depends="clean.module.e3, clean.module.e3-common, clean.module.e3-common-config, clean.module.fastdfs_client, clean.module.e3-api-content, clean.module.e3-api-goods, clean.module.e3-api-search, clean.module.e3-api-user, clean.module.e3-api-order, clean.module.e3-service-content, clean.module.e3-service-goods, clean.module.e3-service-search, clean.module.e3-service-user, clean.module.e3-web-cart, clean.module.e3-web-item, clean.module.e3-web-manager, clean.module.e3-web-portal, clean.module.e3-web-search, clean.module.e3-web-sso, clean.module.e3-service-order, clean.module.e3-web-order, clean.artifact.e3-web-cart:war_exploded, clean.artifact.e3-web-item:war_exploded, clean.artifact.e3-web-manager:war_exploded, clean.artifact.e3-web-order:war_exploded, clean.artifact.e3-web-portal:war_exploded, clean.artifact.e3-web-search:war_exploded, clean.artifact.e3-web-sso:war_exploded" description="cleanup all"/>
+  
+  <target name="build.modules" depends="init, clean, compile.module.e3, compile.module.e3-common, compile.module.e3-common-config, compile.module.fastdfs_client, compile.module.e3-api-content, compile.module.e3-api-goods, compile.module.e3-api-search, compile.module.e3-api-user, compile.module.e3-api-order, compile.module.e3-service-content, compile.module.e3-service-goods, compile.module.e3-service-search, compile.module.e3-service-user, compile.module.e3-web-cart, compile.module.e3-web-item, compile.module.e3-web-manager, compile.module.e3-web-portal, compile.module.e3-web-search, compile.module.e3-web-sso, compile.module.e3-service-order, compile.module.e3-web-order" description="build all modules"/>
+  
+  <target name="init.artifacts">
+    <property name="artifacts.temp.dir" value="${basedir}/__artifacts_temp"/>
+    <property name="artifact.output.e3-web-cart:war" value="${basedir}/e3-web-cart/target"/>
+    <property name="artifact.output.e3-web-cart:war_exploded" value="${basedir}/e3-web-cart/target/e3-web-cart"/>
+    <property name="artifact.output.e3-web-item:war" value="${basedir}/e3-web-item/target"/>
+    <property name="artifact.output.e3-web-item:war_exploded" value="${basedir}/e3-web-item/target/e3-web-item"/>
+    <property name="artifact.output.e3-web-manager:war" value="${basedir}/e3-web-manager/target"/>
+    <property name="artifact.output.e3-web-manager:war_exploded" value="${basedir}/e3-web-manager/target/e3-web-manager"/>
+    <property name="artifact.output.e3-web-order:war" value="${basedir}/e3-web-order/target"/>
+    <property name="artifact.output.e3-web-order:war_exploded" value="${basedir}/e3-web-order/target/e3-web-order"/>
+    <property name="artifact.output.e3-web-portal:war" value="${basedir}/e3-web-portal/target"/>
+    <property name="artifact.output.e3-web-portal:war_exploded" value="${basedir}/e3-web-portal/target/e3-web-portal"/>
+    <property name="artifact.output.e3-web-search:war" value="${basedir}/e3-web-search/target"/>
+    <property name="artifact.output.e3-web-search:war_exploded" value="${basedir}/e3-web-search/target/e3-web-search"/>
+    <property name="artifact.output.e3-web-sso:war" value="${basedir}/e3-web-sso/target"/>
+    <property name="artifact.output.e3-web-sso:war_exploded" value="${basedir}/e3-web-sso/target/e3-web-sso"/>
+    <mkdir dir="${artifacts.temp.dir}"/>
+    <property name="temp.jar.path.e3-web-cart.war" value="${artifacts.temp.dir}/e3-web-cart.war"/>
+    <property name="temp.jar.path.e3-common-1.0-SNAPSHOT.jar" value="${artifacts.temp.dir}/e3-common-1.0-SNAPSHOT.jar"/>
+    <property name="temp.jar.path.e3-common-config-1.0-SNAPSHOT.jar" value="${artifacts.temp.dir}/e3-common-config-1.0-SNAPSHOT.jar"/>
+    <property name="temp.jar.path.e3-api-goods-1.0-SNAPSHOT.jar" value="${artifacts.temp.dir}/e3-api-goods-1.0-SNAPSHOT.jar"/>
+    <property name="temp.jar.path.e3-api-user-1.0-SNAPSHOT.jar" value="${artifacts.temp.dir}/e3-api-user-1.0-SNAPSHOT.jar"/>
+    <property name="temp.jar.path.e3-web-item.war" value="${artifacts.temp.dir}/e3-web-item.war"/>
+    <property name="temp.jar.path.e3-api-goods-1.0-SNAPSHOT.jar2" value="${artifacts.temp.dir}/1/e3-api-goods-1.0-SNAPSHOT.jar"/>
+    <mkdir dir="${artifacts.temp.dir}/1"/>
+    <property name="temp.jar.path.e3-common-config-1.0-SNAPSHOT.jar2" value="${artifacts.temp.dir}/1/e3-common-config-1.0-SNAPSHOT.jar"/>
+    <property name="temp.jar.path.e3-common-1.0-SNAPSHOT.jar2" value="${artifacts.temp.dir}/1/e3-common-1.0-SNAPSHOT.jar"/>
+    <property name="temp.jar.path.e3-web-manager.war" value="${artifacts.temp.dir}/e3-web-manager.war"/>
+    <property name="temp.jar.path.e3-api-user-1.0-SNAPSHOT.jar2" value="${artifacts.temp.dir}/1/e3-api-user-1.0-SNAPSHOT.jar"/>
+    <property name="temp.jar.path.e3-common-1.0-SNAPSHOT.jar3" value="${artifacts.temp.dir}/2/e3-common-1.0-SNAPSHOT.jar"/>
+    <mkdir dir="${artifacts.temp.dir}/2"/>
+    <property name="temp.jar.path.e3-common-config-1.0-SNAPSHOT.jar3" value="${artifacts.temp.dir}/2/e3-common-config-1.0-SNAPSHOT.jar"/>
+    <property name="temp.jar.path.e3-api-goods-1.0-SNAPSHOT.jar3" value="${artifacts.temp.dir}/2/e3-api-goods-1.0-SNAPSHOT.jar"/>
+    <property name="temp.jar.path.e3-api-content-1.0-SNAPSHOT.jar" value="${artifacts.temp.dir}/e3-api-content-1.0-SNAPSHOT.jar"/>
+    <property name="temp.jar.path.e3-api-search-1.0-SNAPSHOT.jar" value="${artifacts.temp.dir}/e3-api-search-1.0-SNAPSHOT.jar"/>
+    <property name="temp.jar.path.e3-web-order.war" value="${artifacts.temp.dir}/e3-web-order.war"/>
+    <property name="temp.jar.path.e3-common-config-1.0-SNAPSHOT.jar4" value="${artifacts.temp.dir}/3/e3-common-config-1.0-SNAPSHOT.jar"/>
+    <mkdir dir="${artifacts.temp.dir}/3"/>
+    <property name="temp.jar.path.e3-api-user-1.0-SNAPSHOT.jar3" value="${artifacts.temp.dir}/2/e3-api-user-1.0-SNAPSHOT.jar"/>
+    <property name="temp.jar.path.e3-common-1.0-SNAPSHOT.jar4" value="${artifacts.temp.dir}/3/e3-common-1.0-SNAPSHOT.jar"/>
+    <property name="temp.jar.path.e3-api-goods-1.0-SNAPSHOT.jar4" value="${artifacts.temp.dir}/3/e3-api-goods-1.0-SNAPSHOT.jar"/>
+    <property name="temp.jar.path.e3-api-order-1.0-SNAPSHOT.jar" value="${artifacts.temp.dir}/e3-api-order-1.0-SNAPSHOT.jar"/>
+    <property name="temp.jar.path.e3-web-portal.war" value="${artifacts.temp.dir}/e3-web-portal.war"/>
+    <property name="temp.jar.path.e3-common-config-1.0-SNAPSHOT.jar5" value="${artifacts.temp.dir}/4/e3-common-config-1.0-SNAPSHOT.jar"/>
+    <mkdir dir="${artifacts.temp.dir}/4"/>
+    <property name="temp.jar.path.e3-common-1.0-SNAPSHOT.jar5" value="${artifacts.temp.dir}/4/e3-common-1.0-SNAPSHOT.jar"/>
+    <property name="temp.jar.path.e3-api-content-1.0-SNAPSHOT.jar2" value="${artifacts.temp.dir}/1/e3-api-content-1.0-SNAPSHOT.jar"/>
+    <property name="temp.jar.path.e3-web-search.war" value="${artifacts.temp.dir}/e3-web-search.war"/>
+    <property name="temp.jar.path.e3-api-search-1.0-SNAPSHOT.jar2" value="${artifacts.temp.dir}/1/e3-api-search-1.0-SNAPSHOT.jar"/>
+    <property name="temp.jar.path.e3-common-1.0-SNAPSHOT.jar6" value="${artifacts.temp.dir}/5/e3-common-1.0-SNAPSHOT.jar"/>
+    <mkdir dir="${artifacts.temp.dir}/5"/>
+    <property name="temp.jar.path.e3-common-config-1.0-SNAPSHOT.jar6" value="${artifacts.temp.dir}/5/e3-common-config-1.0-SNAPSHOT.jar"/>
+    <property name="temp.jar.path.e3-api-content-1.0-SNAPSHOT.jar3" value="${artifacts.temp.dir}/2/e3-api-content-1.0-SNAPSHOT.jar"/>
+    <property name="temp.jar.path.e3-web-sso.war" value="${artifacts.temp.dir}/e3-web-sso.war"/>
+    <property name="temp.jar.path.e3-common-1.0-SNAPSHOT.jar7" value="${artifacts.temp.dir}/6/e3-common-1.0-SNAPSHOT.jar"/>
+    <mkdir dir="${artifacts.temp.dir}/6"/>
+    <property name="temp.jar.path.e3-common-config-1.0-SNAPSHOT.jar7" value="${artifacts.temp.dir}/6/e3-common-config-1.0-SNAPSHOT.jar"/>
+    <property name="temp.jar.path.e3-api-user-1.0-SNAPSHOT.jar4" value="${artifacts.temp.dir}/3/e3-api-user-1.0-SNAPSHOT.jar"/>
+  </target>
+  
+  <target name="clean.artifact.e3-web-cart:war_exploded" description="clean e3-web-cart:war exploded artifact output">
+    <delete dir="${artifact.output.e3-web-cart:war_exploded}"/>
+  </target>
+  
+  <target name="clean.artifact.e3-web-item:war_exploded" description="clean e3-web-item:war exploded artifact output">
+    <delete dir="${artifact.output.e3-web-item:war_exploded}"/>
+  </target>
+  
+  <target name="clean.artifact.e3-web-manager:war_exploded" description="clean e3-web-manager:war exploded artifact output">
+    <delete dir="${artifact.output.e3-web-manager:war_exploded}"/>
+  </target>
+  
+  <target name="clean.artifact.e3-web-order:war_exploded" description="clean e3-web-order:war exploded artifact output">
+    <delete dir="${artifact.output.e3-web-order:war_exploded}"/>
+  </target>
+  
+  <target name="clean.artifact.e3-web-portal:war_exploded" description="clean e3-web-portal:war exploded artifact output">
+    <delete dir="${artifact.output.e3-web-portal:war_exploded}"/>
+  </target>
+  
+  <target name="clean.artifact.e3-web-search:war_exploded" description="clean e3-web-search:war exploded artifact output">
+    <delete dir="${artifact.output.e3-web-search:war_exploded}"/>
+  </target>
+  
+  <target name="clean.artifact.e3-web-sso:war_exploded" description="clean e3-web-sso:war exploded artifact output">
+    <delete dir="${artifact.output.e3-web-sso:war_exploded}"/>
+  </target>
+  
+  <target name="artifact.e3-web-cart:war" depends="init.artifacts, artifact.e3-web-cart:war_exploded" description="Build &#39;e3-web-cart:war&#39; artifact">
+    <property name="artifact.temp.output.e3-web-cart:war" value="${artifacts.temp.dir}/e3_web_cart_war"/>
+    <mkdir dir="${artifact.temp.output.e3-web-cart:war}"/>
+    <zip destfile="${temp.jar.path.e3-web-cart.war}">
+      <zipfileset dir="${artifact.temp.output.e3-web-cart:war_exploded}"/>
+    </zip>
+    <copy file="${temp.jar.path.e3-web-cart.war}" tofile="${artifact.temp.output.e3-web-cart:war}/e3-web-cart.war"/>
+  </target>
+  
+  <target name="artifact.e3-web-cart:war_exploded" depends="init.artifacts, compile.module.e3-web-cart, compile.module.e3-common, compile.module.e3-common-config, compile.module.e3-api-goods, compile.module.e3-api-user" description="Build &#39;e3-web-cart:war exploded&#39; artifact">
+    <mkdir dir="${artifact.output.e3-web-cart:war_exploded}"/>
+    <jar destfile="${temp.jar.path.e3-common-1.0-SNAPSHOT.jar}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${e3-common.output.dir}"/>
+    </jar>
+    <jar destfile="${temp.jar.path.e3-common-config-1.0-SNAPSHOT.jar}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${e3-common-config.output.dir}"/>
+    </jar>
+    <jar destfile="${temp.jar.path.e3-api-goods-1.0-SNAPSHOT.jar}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${e3-api-goods.output.dir}"/>
+    </jar>
+    <jar destfile="${temp.jar.path.e3-api-user-1.0-SNAPSHOT.jar}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${e3-api-user.output.dir}"/>
+    </jar>
+    <mkdir dir="${artifact.output.e3-web-cart:war_exploded}/WEB-INF"/>
+    <mkdir dir="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/classes"/>
+    <copy todir="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/classes">
+      <fileset dir="${e3-web-cart.output.dir}"/>
+    </copy>
+    <mkdir dir="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib"/>
+    <copy file="${temp.jar.path.e3-common-1.0-SNAPSHOT.jar}" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/e3-common-1.0-SNAPSHOT.jar"/>
+    <copy file="${basedir}/../repository/fastdfs_client/fastdfs_client/1.25/fastdfs_client-1.25.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/fastdfs_client-1.25.jar"/>
+    <copy file="${temp.jar.path.e3-common-config-1.0-SNAPSHOT.jar}" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/e3-common-config-1.0-SNAPSHOT.jar"/>
+    <copy file="${basedir}/../repository/javax/servlet/jsp/javax.servlet.jsp-api/2.3.1/javax.servlet.jsp-api-2.3.1.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/javax.servlet.jsp-api-2.3.1.jar"/>
+    <copy file="${basedir}/../repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/javax.servlet-api-3.1.0.jar"/>
+    <copy file="${basedir}/../repository/javax/servlet/jsp/jstl/jstl/1.2/jstl-1.2.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/jstl-1.2.jar"/>
+    <copy file="${temp.jar.path.e3-api-goods-1.0-SNAPSHOT.jar}" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/e3-api-goods-1.0-SNAPSHOT.jar"/>
+    <copy file="${temp.jar.path.e3-api-user-1.0-SNAPSHOT.jar}" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/e3-api-user-1.0-SNAPSHOT.jar"/>
+    <copy file="${basedir}/../repository/junit/junit/4.12/junit-4.12.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/junit-4.12.jar"/>
+    <copy file="${basedir}/../repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/hamcrest-core-1.3.jar"/>
+    <copy file="${basedir}/../repository/org/apache/httpcomponents/httpclient/4.3.5/httpclient-4.3.5.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/httpclient-4.3.5.jar"/>
+    <copy file="${basedir}/../repository/org/apache/httpcomponents/httpcore/4.3.2/httpcore-4.3.2.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/httpcore-4.3.2.jar"/>
+    <copy file="${basedir}/../repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/commons-logging-1.1.3.jar"/>
+    <copy file="${basedir}/../repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/commons-codec-1.6.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-webmvc/5.1.2.RELEASE/spring-webmvc-5.1.2.RELEASE.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/spring-webmvc-5.1.2.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-web/5.1.2.RELEASE/spring-web-5.1.2.RELEASE.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/spring-web-5.1.2.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/com/alibaba/dubbo/2.5.3/dubbo-2.5.3.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/dubbo-2.5.3.jar"/>
+    <copy file="${basedir}/../repository/org/javassist/javassist/3.15.0-GA/javassist-3.15.0-GA.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/javassist-3.15.0-GA.jar"/>
+    <copy file="${basedir}/../repository/org/jboss/netty/netty/3.2.5.Final/netty-3.2.5.Final.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/netty-3.2.5.Final.jar"/>
+    <copy file="${basedir}/../repository/com/101tec/zkclient/0.10/zkclient-0.10.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/zkclient-0.10.jar"/>
+    <copy file="${basedir}/../repository/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/slf4j-api-1.6.1.jar"/>
+    <copy file="${basedir}/../repository/org/apache/zookeeper/zookeeper/3.4.8/zookeeper-3.4.8.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/zookeeper-3.4.8.jar"/>
+    <copy file="${basedir}/../repository/org/slf4j/slf4j-log4j12/1.6.1/slf4j-log4j12-1.6.1.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/slf4j-log4j12-1.6.1.jar"/>
+    <copy file="${basedir}/../repository/jline/jline/0.9.94/jline-0.9.94.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/jline-0.9.94.jar"/>
+    <copy file="${basedir}/../repository/io/netty/netty/3.7.0.Final/netty-3.7.0.Final.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/netty-3.7.0.Final.jar"/>
+    <copy file="${basedir}/../repository/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/commons-lang3-3.3.2.jar"/>
+    <copy file="${basedir}/../repository/commons-io/commons-io/1.3.2/commons-io-1.3.2.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/commons-io-1.3.2.jar"/>
+    <copy file="${basedir}/../repository/commons-net/commons-net/3.3/commons-net-3.3.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/commons-net-3.3.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-beans/4.3.7.RELEASE/spring-beans-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/spring-beans-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-context/4.3.7.RELEASE/spring-context-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/spring-context-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-context-support/4.3.7.RELEASE/spring-context-support-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/spring-context-support-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-core/4.3.7.RELEASE/spring-core-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/spring-core-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-expression/4.3.7.RELEASE/spring-expression-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/spring-expression-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-aop/4.3.7.RELEASE/spring-aop-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/spring-aop-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-jdbc/4.3.7.RELEASE/spring-jdbc-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/spring-jdbc-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-tx/4.3.7.RELEASE/spring-tx-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/spring-tx-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-jms/4.3.7.RELEASE/spring-jms-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/spring-jms-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-messaging/4.3.7.RELEASE/spring-messaging-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/spring-messaging-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/apache/activemq/activemq-all/5.15.0/activemq-all-5.15.0.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/activemq-all-5.15.0.jar"/>
+    <copy file="${basedir}/../repository/org/aspectj/aspectjrt/1.8.10/aspectjrt-1.8.10.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/aspectjrt-1.8.10.jar"/>
+    <copy file="${basedir}/../repository/org/aspectj/aspectjweaver/1.8.10/aspectjweaver-1.8.10.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/aspectjweaver-1.8.10.jar"/>
+    <copy file="${basedir}/../repository/org/mybatis/mybatis/3.4.4/mybatis-3.4.4.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/mybatis-3.4.4.jar"/>
+    <copy file="${basedir}/../repository/org/mybatis/mybatis-spring/1.3.1/mybatis-spring-1.3.1.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/mybatis-spring-1.3.1.jar"/>
+    <copy file="${basedir}/../repository/com/fasterxml/jackson/core/jackson-annotations/2.8.7/jackson-annotations-2.8.7.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/jackson-annotations-2.8.7.jar"/>
+    <copy file="${basedir}/../repository/com/fasterxml/jackson/core/jackson-core/2.8.7/jackson-core-2.8.7.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/jackson-core-2.8.7.jar"/>
+    <copy file="${basedir}/../repository/com/fasterxml/jackson/core/jackson-databind/2.8.7/jackson-databind-2.8.7.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/jackson-databind-2.8.7.jar"/>
+    <copy file="${basedir}/../repository/commons-fileupload/commons-fileupload/1.3.2/commons-fileupload-1.3.2.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/commons-fileupload-1.3.2.jar"/>
+    <copy file="${basedir}/../repository/com/github/miemiedev/mybatis-paginator/1.2.15/mybatis-paginator-1.2.15.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/mybatis-paginator-1.2.15.jar"/>
+    <copy file="${basedir}/../repository/com/github/pagehelper/pagehelper/4.1.0/pagehelper-4.1.0.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/pagehelper-4.1.0.jar"/>
+    <copy file="${basedir}/../repository/com/github/jsqlparser/jsqlparser/0.9.4/jsqlparser-0.9.4.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/jsqlparser-0.9.4.jar"/>
+    <copy file="${basedir}/../repository/com/alibaba/druid/1.0.29/druid-1.0.29.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/druid-1.0.29.jar"/>
+    <copy file="${basedir}/../repository/log4j/log4j/1.2.17/log4j-1.2.17.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/log4j-1.2.17.jar"/>
+    <copy file="${basedir}/../repository/mysql/mysql-connector-java/5.1.42/mysql-connector-java-5.1.42.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/mysql-connector-java-5.1.42.jar"/>
+    <copy file="${basedir}/../repository/org/apache/solr/solr-solrj/4.10.4/solr-solrj-4.10.4.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/solr-solrj-4.10.4.jar"/>
+    <copy file="${basedir}/../repository/org/apache/httpcomponents/httpmime/4.3.1/httpmime-4.3.1.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/httpmime-4.3.1.jar"/>
+    <copy file="${basedir}/../repository/org/codehaus/woodstox/wstx-asl/3.2.7/wstx-asl-3.2.7.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/wstx-asl-3.2.7.jar"/>
+    <copy file="${basedir}/../repository/org/noggit/noggit/0.5/noggit-0.5.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/noggit-0.5.jar"/>
+    <copy file="${basedir}/../repository/redis/clients/jedis/2.9.0/jedis-2.9.0.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/jedis-2.9.0.jar"/>
+    <copy file="${basedir}/../repository/org/apache/commons/commons-pool2/2.4.2/commons-pool2-2.4.2.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/commons-pool2-2.4.2.jar"/>
+    <copy file="${basedir}/../repository/org/freemarker/freemarker/2.3.26-incubating/freemarker-2.3.26-incubating.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/freemarker-2.3.26-incubating.jar"/>
+    <copy file="${basedir}/../repository/org/quartz-scheduler/quartz/2.2.2/quartz-2.2.2.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/quartz-2.2.2.jar"/>
+    <copy file="${basedir}/../repository/c3p0/c3p0/0.9.1.1/c3p0-0.9.1.1.jar" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/lib/c3p0-0.9.1.1.jar"/>
+    <mkdir dir="${artifact.output.e3-web-cart:war_exploded}/META-INF"/>
+    <copy file="${basedir}/e3-web-cart/target/e3-web-cart/META-INF/MANIFEST.MF" tofile="${artifact.output.e3-web-cart:war_exploded}/META-INF/MANIFEST.MF"/>
+    <copy todir="${artifact.output.e3-web-cart:war_exploded}">
+      <fileset dir="${basedir}/e3-web-cart/src/main/webapp"/>
+    </copy>
+    <mkdir dir="${artifact.output.e3-web-cart:war_exploded}/WEB-INF"/>
+    <copy file="${basedir}/e3-web-cart/src/main/webapp/WEB-INF/web.xml" tofile="${artifact.output.e3-web-cart:war_exploded}/WEB-INF/web.xml"/>
+  </target>
+  
+  <target name="artifact.e3-web-item:war" depends="init.artifacts, artifact.e3-web-item:war_exploded" description="Build &#39;e3-web-item:war&#39; artifact">
+    <property name="artifact.temp.output.e3-web-item:war" value="${artifacts.temp.dir}/e3_web_item_war"/>
+    <mkdir dir="${artifact.temp.output.e3-web-item:war}"/>
+    <zip destfile="${temp.jar.path.e3-web-item.war}">
+      <zipfileset dir="${artifact.temp.output.e3-web-item:war_exploded}"/>
+    </zip>
+    <copy file="${temp.jar.path.e3-web-item.war}" tofile="${artifact.temp.output.e3-web-item:war}/e3-web-item.war"/>
+  </target>
+  
+  <target name="artifact.e3-web-item:war_exploded" depends="init.artifacts, compile.module.e3-web-item, compile.module.e3-api-goods, compile.module.e3-common-config, compile.module.e3-common" description="Build &#39;e3-web-item:war exploded&#39; artifact">
+    <mkdir dir="${artifact.output.e3-web-item:war_exploded}"/>
+    <jar destfile="${temp.jar.path.e3-api-goods-1.0-SNAPSHOT.jar2}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${e3-api-goods.output.dir}"/>
+    </jar>
+    <jar destfile="${temp.jar.path.e3-common-config-1.0-SNAPSHOT.jar2}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${e3-common-config.output.dir}"/>
+    </jar>
+    <jar destfile="${temp.jar.path.e3-common-1.0-SNAPSHOT.jar2}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${e3-common.output.dir}"/>
+    </jar>
+    <mkdir dir="${artifact.output.e3-web-item:war_exploded}/WEB-INF"/>
+    <mkdir dir="${artifact.output.e3-web-item:war_exploded}/WEB-INF/classes"/>
+    <copy todir="${artifact.output.e3-web-item:war_exploded}/WEB-INF/classes">
+      <fileset dir="${e3-web-item.output.dir}"/>
+    </copy>
+    <mkdir dir="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib"/>
+    <copy file="${basedir}/../repository/javax/servlet/jsp/jstl/jstl/1.2/jstl-1.2.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/jstl-1.2.jar"/>
+    <copy file="${temp.jar.path.e3-api-goods-1.0-SNAPSHOT.jar2}" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/e3-api-goods-1.0-SNAPSHOT.jar"/>
+    <copy file="${temp.jar.path.e3-common-config-1.0-SNAPSHOT.jar2}" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/e3-common-config-1.0-SNAPSHOT.jar"/>
+    <copy file="${temp.jar.path.e3-common-1.0-SNAPSHOT.jar2}" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/e3-common-1.0-SNAPSHOT.jar"/>
+    <copy file="${basedir}/../repository/fastdfs_client/fastdfs_client/1.25/fastdfs_client-1.25.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/fastdfs_client-1.25.jar"/>
+    <copy file="${basedir}/../repository/junit/junit/4.12/junit-4.12.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/junit-4.12.jar"/>
+    <copy file="${basedir}/../repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/hamcrest-core-1.3.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-web/5.1.2.RELEASE/spring-web-5.1.2.RELEASE.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/spring-web-5.1.2.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/com/alibaba/dubbo/2.5.3/dubbo-2.5.3.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/dubbo-2.5.3.jar"/>
+    <copy file="${basedir}/../repository/org/javassist/javassist/3.15.0-GA/javassist-3.15.0-GA.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/javassist-3.15.0-GA.jar"/>
+    <copy file="${basedir}/../repository/org/jboss/netty/netty/3.2.5.Final/netty-3.2.5.Final.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/netty-3.2.5.Final.jar"/>
+    <copy file="${basedir}/../repository/org/apache/httpcomponents/httpclient/4.3.5/httpclient-4.3.5.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/httpclient-4.3.5.jar"/>
+    <copy file="${basedir}/../repository/org/apache/httpcomponents/httpcore/4.3.2/httpcore-4.3.2.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/httpcore-4.3.2.jar"/>
+    <copy file="${basedir}/../repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/commons-logging-1.1.3.jar"/>
+    <copy file="${basedir}/../repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/commons-codec-1.6.jar"/>
+    <copy file="${basedir}/../repository/com/101tec/zkclient/0.10/zkclient-0.10.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/zkclient-0.10.jar"/>
+    <copy file="${basedir}/../repository/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/slf4j-api-1.6.1.jar"/>
+    <copy file="${basedir}/../repository/org/apache/zookeeper/zookeeper/3.4.8/zookeeper-3.4.8.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/zookeeper-3.4.8.jar"/>
+    <copy file="${basedir}/../repository/org/slf4j/slf4j-log4j12/1.6.1/slf4j-log4j12-1.6.1.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/slf4j-log4j12-1.6.1.jar"/>
+    <copy file="${basedir}/../repository/jline/jline/0.9.94/jline-0.9.94.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/jline-0.9.94.jar"/>
+    <copy file="${basedir}/../repository/io/netty/netty/3.7.0.Final/netty-3.7.0.Final.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/netty-3.7.0.Final.jar"/>
+    <copy file="${basedir}/../repository/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/commons-lang3-3.3.2.jar"/>
+    <copy file="${basedir}/../repository/commons-io/commons-io/1.3.2/commons-io-1.3.2.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/commons-io-1.3.2.jar"/>
+    <copy file="${basedir}/../repository/commons-net/commons-net/3.3/commons-net-3.3.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/commons-net-3.3.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-beans/4.3.7.RELEASE/spring-beans-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/spring-beans-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-webmvc/4.3.7.RELEASE/spring-webmvc-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/spring-webmvc-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-context/4.3.7.RELEASE/spring-context-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/spring-context-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-context-support/4.3.7.RELEASE/spring-context-support-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/spring-context-support-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-core/4.3.7.RELEASE/spring-core-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/spring-core-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-expression/4.3.7.RELEASE/spring-expression-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/spring-expression-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-aop/4.3.7.RELEASE/spring-aop-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/spring-aop-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-jdbc/4.3.7.RELEASE/spring-jdbc-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/spring-jdbc-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-tx/4.3.7.RELEASE/spring-tx-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/spring-tx-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-jms/4.3.7.RELEASE/spring-jms-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/spring-jms-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-messaging/4.3.7.RELEASE/spring-messaging-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/spring-messaging-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/apache/activemq/activemq-all/5.15.0/activemq-all-5.15.0.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/activemq-all-5.15.0.jar"/>
+    <copy file="${basedir}/../repository/org/aspectj/aspectjrt/1.8.10/aspectjrt-1.8.10.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/aspectjrt-1.8.10.jar"/>
+    <copy file="${basedir}/../repository/org/aspectj/aspectjweaver/1.8.10/aspectjweaver-1.8.10.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/aspectjweaver-1.8.10.jar"/>
+    <copy file="${basedir}/../repository/org/mybatis/mybatis/3.4.4/mybatis-3.4.4.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/mybatis-3.4.4.jar"/>
+    <copy file="${basedir}/../repository/org/mybatis/mybatis-spring/1.3.1/mybatis-spring-1.3.1.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/mybatis-spring-1.3.1.jar"/>
+    <copy file="${basedir}/../repository/com/fasterxml/jackson/core/jackson-annotations/2.8.7/jackson-annotations-2.8.7.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/jackson-annotations-2.8.7.jar"/>
+    <copy file="${basedir}/../repository/com/fasterxml/jackson/core/jackson-core/2.8.7/jackson-core-2.8.7.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/jackson-core-2.8.7.jar"/>
+    <copy file="${basedir}/../repository/com/fasterxml/jackson/core/jackson-databind/2.8.7/jackson-databind-2.8.7.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/jackson-databind-2.8.7.jar"/>
+    <copy file="${basedir}/../repository/commons-fileupload/commons-fileupload/1.3.2/commons-fileupload-1.3.2.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/commons-fileupload-1.3.2.jar"/>
+    <copy file="${basedir}/../repository/com/github/miemiedev/mybatis-paginator/1.2.15/mybatis-paginator-1.2.15.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/mybatis-paginator-1.2.15.jar"/>
+    <copy file="${basedir}/../repository/com/github/pagehelper/pagehelper/4.1.0/pagehelper-4.1.0.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/pagehelper-4.1.0.jar"/>
+    <copy file="${basedir}/../repository/com/github/jsqlparser/jsqlparser/0.9.4/jsqlparser-0.9.4.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/jsqlparser-0.9.4.jar"/>
+    <copy file="${basedir}/../repository/com/alibaba/druid/1.0.29/druid-1.0.29.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/druid-1.0.29.jar"/>
+    <copy file="${basedir}/../repository/log4j/log4j/1.2.17/log4j-1.2.17.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/log4j-1.2.17.jar"/>
+    <copy file="${basedir}/../repository/mysql/mysql-connector-java/5.1.42/mysql-connector-java-5.1.42.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/mysql-connector-java-5.1.42.jar"/>
+    <copy file="${basedir}/../repository/org/apache/solr/solr-solrj/4.10.4/solr-solrj-4.10.4.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/solr-solrj-4.10.4.jar"/>
+    <copy file="${basedir}/../repository/org/apache/httpcomponents/httpmime/4.3.1/httpmime-4.3.1.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/httpmime-4.3.1.jar"/>
+    <copy file="${basedir}/../repository/org/codehaus/woodstox/wstx-asl/3.2.7/wstx-asl-3.2.7.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/wstx-asl-3.2.7.jar"/>
+    <copy file="${basedir}/../repository/org/noggit/noggit/0.5/noggit-0.5.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/noggit-0.5.jar"/>
+    <copy file="${basedir}/../repository/redis/clients/jedis/2.9.0/jedis-2.9.0.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/jedis-2.9.0.jar"/>
+    <copy file="${basedir}/../repository/org/apache/commons/commons-pool2/2.4.2/commons-pool2-2.4.2.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/commons-pool2-2.4.2.jar"/>
+    <copy file="${basedir}/../repository/org/freemarker/freemarker/2.3.26-incubating/freemarker-2.3.26-incubating.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/freemarker-2.3.26-incubating.jar"/>
+    <copy file="${basedir}/../repository/org/quartz-scheduler/quartz/2.2.2/quartz-2.2.2.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/quartz-2.2.2.jar"/>
+    <copy file="${basedir}/../repository/c3p0/c3p0/0.9.1.1/c3p0-0.9.1.1.jar" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/lib/c3p0-0.9.1.1.jar"/>
+    <mkdir dir="${artifact.output.e3-web-item:war_exploded}/META-INF"/>
+    <copy file="${basedir}/e3-web-item/target/e3-web-item/META-INF/MANIFEST.MF" tofile="${artifact.output.e3-web-item:war_exploded}/META-INF/MANIFEST.MF"/>
+    <copy todir="${artifact.output.e3-web-item:war_exploded}">
+      <fileset dir="${basedir}/e3-web-item/src/main/webapp"/>
+    </copy>
+    <mkdir dir="${artifact.output.e3-web-item:war_exploded}/WEB-INF"/>
+    <copy file="${basedir}/e3-web-item/src/main/webapp/WEB-INF/web.xml" tofile="${artifact.output.e3-web-item:war_exploded}/WEB-INF/web.xml"/>
+  </target>
+  
+  <target name="artifact.e3-web-manager:war" depends="init.artifacts, artifact.e3-web-manager:war_exploded" description="Build &#39;e3-web-manager:war&#39; artifact">
+    <property name="artifact.temp.output.e3-web-manager:war" value="${artifacts.temp.dir}/e3_web_manager_war"/>
+    <mkdir dir="${artifact.temp.output.e3-web-manager:war}"/>
+    <zip destfile="${temp.jar.path.e3-web-manager.war}">
+      <zipfileset dir="${artifact.temp.output.e3-web-manager:war_exploded}"/>
+    </zip>
+    <copy file="${temp.jar.path.e3-web-manager.war}" tofile="${artifact.temp.output.e3-web-manager:war}/e3-web-manager.war"/>
+  </target>
+  
+  <target name="artifact.e3-web-manager:war_exploded" depends="init.artifacts, compile.module.e3-web-manager, compile.module.e3-api-user, compile.module.e3-common, compile.module.e3-common-config, compile.module.e3-api-goods, compile.module.e3-api-content, compile.module.e3-api-search" description="Build &#39;e3-web-manager:war exploded&#39; artifact">
+    <mkdir dir="${artifact.output.e3-web-manager:war_exploded}"/>
+    <jar destfile="${temp.jar.path.e3-api-user-1.0-SNAPSHOT.jar2}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${e3-api-user.output.dir}"/>
+    </jar>
+    <jar destfile="${temp.jar.path.e3-common-1.0-SNAPSHOT.jar3}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${e3-common.output.dir}"/>
+    </jar>
+    <jar destfile="${temp.jar.path.e3-common-config-1.0-SNAPSHOT.jar3}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${e3-common-config.output.dir}"/>
+    </jar>
+    <jar destfile="${temp.jar.path.e3-api-goods-1.0-SNAPSHOT.jar3}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${e3-api-goods.output.dir}"/>
+    </jar>
+    <jar destfile="${temp.jar.path.e3-api-content-1.0-SNAPSHOT.jar}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${e3-api-content.output.dir}"/>
+    </jar>
+    <jar destfile="${temp.jar.path.e3-api-search-1.0-SNAPSHOT.jar}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${e3-api-search.output.dir}"/>
+    </jar>
+    <mkdir dir="${artifact.output.e3-web-manager:war_exploded}/WEB-INF"/>
+    <mkdir dir="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/classes"/>
+    <copy todir="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/classes">
+      <fileset dir="${e3-web-manager.output.dir}"/>
+    </copy>
+    <mkdir dir="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib"/>
+    <copy file="${temp.jar.path.e3-api-user-1.0-SNAPSHOT.jar2}" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/e3-api-user-1.0-SNAPSHOT.jar"/>
+    <copy file="${temp.jar.path.e3-common-1.0-SNAPSHOT.jar3}" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/e3-common-1.0-SNAPSHOT.jar"/>
+    <copy file="${temp.jar.path.e3-common-config-1.0-SNAPSHOT.jar3}" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/e3-common-config-1.0-SNAPSHOT.jar"/>
+    <copy file="${basedir}/../repository/javax/servlet/jsp/jstl/jstl/1.2/jstl-1.2.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/jstl-1.2.jar"/>
+    <copy file="${temp.jar.path.e3-api-goods-1.0-SNAPSHOT.jar3}" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/e3-api-goods-1.0-SNAPSHOT.jar"/>
+    <copy file="${temp.jar.path.e3-api-content-1.0-SNAPSHOT.jar}" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/e3-api-content-1.0-SNAPSHOT.jar"/>
+    <copy file="${temp.jar.path.e3-api-search-1.0-SNAPSHOT.jar}" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/e3-api-search-1.0-SNAPSHOT.jar"/>
+    <copy file="${basedir}/../repository/fastdfs_client/fastdfs_client/1.25/fastdfs_client-1.25.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/fastdfs_client-1.25.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-web/5.1.2.RELEASE/spring-web-5.1.2.RELEASE.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/spring-web-5.1.2.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/com/alibaba/dubbo/2.5.3/dubbo-2.5.3.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/dubbo-2.5.3.jar"/>
+    <copy file="${basedir}/../repository/org/javassist/javassist/3.15.0-GA/javassist-3.15.0-GA.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/javassist-3.15.0-GA.jar"/>
+    <copy file="${basedir}/../repository/org/jboss/netty/netty/3.2.5.Final/netty-3.2.5.Final.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/netty-3.2.5.Final.jar"/>
+    <copy file="${basedir}/../repository/org/apache/httpcomponents/httpclient/4.3.5/httpclient-4.3.5.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/httpclient-4.3.5.jar"/>
+    <copy file="${basedir}/../repository/org/apache/httpcomponents/httpcore/4.3.2/httpcore-4.3.2.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/httpcore-4.3.2.jar"/>
+    <copy file="${basedir}/../repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/commons-logging-1.1.3.jar"/>
+    <copy file="${basedir}/../repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/commons-codec-1.6.jar"/>
+    <copy file="${basedir}/../repository/com/101tec/zkclient/0.10/zkclient-0.10.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/zkclient-0.10.jar"/>
+    <copy file="${basedir}/../repository/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/slf4j-api-1.6.1.jar"/>
+    <copy file="${basedir}/../repository/org/apache/zookeeper/zookeeper/3.4.8/zookeeper-3.4.8.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/zookeeper-3.4.8.jar"/>
+    <copy file="${basedir}/../repository/org/slf4j/slf4j-log4j12/1.6.1/slf4j-log4j12-1.6.1.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/slf4j-log4j12-1.6.1.jar"/>
+    <copy file="${basedir}/../repository/jline/jline/0.9.94/jline-0.9.94.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/jline-0.9.94.jar"/>
+    <copy file="${basedir}/../repository/io/netty/netty/3.7.0.Final/netty-3.7.0.Final.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/netty-3.7.0.Final.jar"/>
+    <copy file="${basedir}/../repository/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/commons-lang3-3.3.2.jar"/>
+    <copy file="${basedir}/../repository/commons-io/commons-io/1.3.2/commons-io-1.3.2.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/commons-io-1.3.2.jar"/>
+    <copy file="${basedir}/../repository/commons-net/commons-net/3.3/commons-net-3.3.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/commons-net-3.3.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-beans/4.3.7.RELEASE/spring-beans-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/spring-beans-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-webmvc/4.3.7.RELEASE/spring-webmvc-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/spring-webmvc-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-context/4.3.7.RELEASE/spring-context-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/spring-context-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-context-support/4.3.7.RELEASE/spring-context-support-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/spring-context-support-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-core/4.3.7.RELEASE/spring-core-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/spring-core-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-expression/4.3.7.RELEASE/spring-expression-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/spring-expression-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-aop/4.3.7.RELEASE/spring-aop-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/spring-aop-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-jdbc/4.3.7.RELEASE/spring-jdbc-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/spring-jdbc-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-tx/4.3.7.RELEASE/spring-tx-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/spring-tx-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-jms/4.3.7.RELEASE/spring-jms-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/spring-jms-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-messaging/4.3.7.RELEASE/spring-messaging-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/spring-messaging-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/apache/activemq/activemq-all/5.15.0/activemq-all-5.15.0.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/activemq-all-5.15.0.jar"/>
+    <copy file="${basedir}/../repository/org/aspectj/aspectjrt/1.8.10/aspectjrt-1.8.10.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/aspectjrt-1.8.10.jar"/>
+    <copy file="${basedir}/../repository/org/aspectj/aspectjweaver/1.8.10/aspectjweaver-1.8.10.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/aspectjweaver-1.8.10.jar"/>
+    <copy file="${basedir}/../repository/org/mybatis/mybatis/3.4.4/mybatis-3.4.4.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/mybatis-3.4.4.jar"/>
+    <copy file="${basedir}/../repository/org/mybatis/mybatis-spring/1.3.1/mybatis-spring-1.3.1.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/mybatis-spring-1.3.1.jar"/>
+    <copy file="${basedir}/../repository/com/fasterxml/jackson/core/jackson-annotations/2.8.7/jackson-annotations-2.8.7.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/jackson-annotations-2.8.7.jar"/>
+    <copy file="${basedir}/../repository/com/fasterxml/jackson/core/jackson-core/2.8.7/jackson-core-2.8.7.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/jackson-core-2.8.7.jar"/>
+    <copy file="${basedir}/../repository/com/fasterxml/jackson/core/jackson-databind/2.8.7/jackson-databind-2.8.7.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/jackson-databind-2.8.7.jar"/>
+    <copy file="${basedir}/../repository/commons-fileupload/commons-fileupload/1.3.2/commons-fileupload-1.3.2.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/commons-fileupload-1.3.2.jar"/>
+    <copy file="${basedir}/../repository/com/github/miemiedev/mybatis-paginator/1.2.15/mybatis-paginator-1.2.15.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/mybatis-paginator-1.2.15.jar"/>
+    <copy file="${basedir}/../repository/com/github/pagehelper/pagehelper/4.1.0/pagehelper-4.1.0.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/pagehelper-4.1.0.jar"/>
+    <copy file="${basedir}/../repository/com/github/jsqlparser/jsqlparser/0.9.4/jsqlparser-0.9.4.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/jsqlparser-0.9.4.jar"/>
+    <copy file="${basedir}/../repository/com/alibaba/druid/1.0.29/druid-1.0.29.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/druid-1.0.29.jar"/>
+    <copy file="${basedir}/../repository/log4j/log4j/1.2.17/log4j-1.2.17.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/log4j-1.2.17.jar"/>
+    <copy file="${basedir}/../repository/mysql/mysql-connector-java/5.1.42/mysql-connector-java-5.1.42.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/mysql-connector-java-5.1.42.jar"/>
+    <copy file="${basedir}/../repository/org/apache/solr/solr-solrj/4.10.4/solr-solrj-4.10.4.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/solr-solrj-4.10.4.jar"/>
+    <copy file="${basedir}/../repository/org/apache/httpcomponents/httpmime/4.3.1/httpmime-4.3.1.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/httpmime-4.3.1.jar"/>
+    <copy file="${basedir}/../repository/org/codehaus/woodstox/wstx-asl/3.2.7/wstx-asl-3.2.7.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/wstx-asl-3.2.7.jar"/>
+    <copy file="${basedir}/../repository/org/noggit/noggit/0.5/noggit-0.5.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/noggit-0.5.jar"/>
+    <copy file="${basedir}/../repository/redis/clients/jedis/2.9.0/jedis-2.9.0.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/jedis-2.9.0.jar"/>
+    <copy file="${basedir}/../repository/org/apache/commons/commons-pool2/2.4.2/commons-pool2-2.4.2.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/commons-pool2-2.4.2.jar"/>
+    <copy file="${basedir}/../repository/org/freemarker/freemarker/2.3.26-incubating/freemarker-2.3.26-incubating.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/freemarker-2.3.26-incubating.jar"/>
+    <copy file="${basedir}/../repository/org/quartz-scheduler/quartz/2.2.2/quartz-2.2.2.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/quartz-2.2.2.jar"/>
+    <copy file="${basedir}/../repository/c3p0/c3p0/0.9.1.1/c3p0-0.9.1.1.jar" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/lib/c3p0-0.9.1.1.jar"/>
+    <mkdir dir="${artifact.output.e3-web-manager:war_exploded}/META-INF"/>
+    <copy file="${basedir}/e3-web-manager/target/e3-web-manager/META-INF/MANIFEST.MF" tofile="${artifact.output.e3-web-manager:war_exploded}/META-INF/MANIFEST.MF"/>
+    <copy todir="${artifact.output.e3-web-manager:war_exploded}">
+      <fileset dir="${basedir}/e3-web-manager/src/main/webapp"/>
+    </copy>
+    <mkdir dir="${artifact.output.e3-web-manager:war_exploded}/WEB-INF"/>
+    <copy file="${basedir}/e3-web-manager/src/main/webapp/WEB-INF/web.xml" tofile="${artifact.output.e3-web-manager:war_exploded}/WEB-INF/web.xml"/>
+  </target>
+  
+  <target name="artifact.e3-web-order:war" depends="init.artifacts, artifact.e3-web-order:war_exploded" description="Build &#39;e3-web-order:war&#39; artifact">
+    <property name="artifact.temp.output.e3-web-order:war" value="${artifacts.temp.dir}/e3_web_order_war"/>
+    <mkdir dir="${artifact.temp.output.e3-web-order:war}"/>
+    <zip destfile="${temp.jar.path.e3-web-order.war}">
+      <zipfileset dir="${artifact.temp.output.e3-web-order:war_exploded}"/>
+    </zip>
+    <copy file="${temp.jar.path.e3-web-order.war}" tofile="${artifact.temp.output.e3-web-order:war}/e3-web-order.war"/>
+  </target>
+  
+  <target name="artifact.e3-web-order:war_exploded" depends="init.artifacts, compile.module.e3-web-order, compile.module.e3-common-config, compile.module.e3-api-user, compile.module.e3-common, compile.module.e3-api-goods, compile.module.e3-api-order" description="Build &#39;e3-web-order:war exploded&#39; artifact">
+    <mkdir dir="${artifact.output.e3-web-order:war_exploded}"/>
+    <jar destfile="${temp.jar.path.e3-common-config-1.0-SNAPSHOT.jar4}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${e3-common-config.output.dir}"/>
+    </jar>
+    <jar destfile="${temp.jar.path.e3-api-user-1.0-SNAPSHOT.jar3}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${e3-api-user.output.dir}"/>
+    </jar>
+    <jar destfile="${temp.jar.path.e3-common-1.0-SNAPSHOT.jar4}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${e3-common.output.dir}"/>
+    </jar>
+    <jar destfile="${temp.jar.path.e3-api-goods-1.0-SNAPSHOT.jar4}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${e3-api-goods.output.dir}"/>
+    </jar>
+    <jar destfile="${temp.jar.path.e3-api-order-1.0-SNAPSHOT.jar}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${e3-api-order.output.dir}"/>
+    </jar>
+    <mkdir dir="${artifact.output.e3-web-order:war_exploded}/WEB-INF"/>
+    <mkdir dir="${artifact.output.e3-web-order:war_exploded}/WEB-INF/classes"/>
+    <copy todir="${artifact.output.e3-web-order:war_exploded}/WEB-INF/classes">
+      <fileset dir="${e3-web-order.output.dir}"/>
+    </copy>
+    <mkdir dir="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib"/>
+    <copy file="${temp.jar.path.e3-common-config-1.0-SNAPSHOT.jar4}" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/e3-common-config-1.0-SNAPSHOT.jar"/>
+    <copy file="${basedir}/../repository/javax/servlet/jsp/javax.servlet.jsp-api/2.3.1/javax.servlet.jsp-api-2.3.1.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/javax.servlet.jsp-api-2.3.1.jar"/>
+    <copy file="${basedir}/../repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/javax.servlet-api-3.1.0.jar"/>
+    <copy file="${basedir}/../repository/javax/servlet/jsp/jstl/jstl/1.2/jstl-1.2.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/jstl-1.2.jar"/>
+    <copy file="${temp.jar.path.e3-api-user-1.0-SNAPSHOT.jar3}" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/e3-api-user-1.0-SNAPSHOT.jar"/>
+    <copy file="${temp.jar.path.e3-common-1.0-SNAPSHOT.jar4}" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/e3-common-1.0-SNAPSHOT.jar"/>
+    <copy file="${basedir}/../repository/fastdfs_client/fastdfs_client/1.25/fastdfs_client-1.25.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/fastdfs_client-1.25.jar"/>
+    <copy file="${temp.jar.path.e3-api-goods-1.0-SNAPSHOT.jar4}" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/e3-api-goods-1.0-SNAPSHOT.jar"/>
+    <copy file="${temp.jar.path.e3-api-order-1.0-SNAPSHOT.jar}" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/e3-api-order-1.0-SNAPSHOT.jar"/>
+    <copy file="${basedir}/../repository/com/alibaba/dubbo/2.5.3/dubbo-2.5.3.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/dubbo-2.5.3.jar"/>
+    <copy file="${basedir}/../repository/org/javassist/javassist/3.15.0-GA/javassist-3.15.0-GA.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/javassist-3.15.0-GA.jar"/>
+    <copy file="${basedir}/../repository/org/jboss/netty/netty/3.2.5.Final/netty-3.2.5.Final.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/netty-3.2.5.Final.jar"/>
+    <copy file="${basedir}/../repository/org/apache/httpcomponents/httpclient/4.3.5/httpclient-4.3.5.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/httpclient-4.3.5.jar"/>
+    <copy file="${basedir}/../repository/org/apache/httpcomponents/httpcore/4.3.2/httpcore-4.3.2.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/httpcore-4.3.2.jar"/>
+    <copy file="${basedir}/../repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/commons-logging-1.1.3.jar"/>
+    <copy file="${basedir}/../repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/commons-codec-1.6.jar"/>
+    <copy file="${basedir}/../repository/com/101tec/zkclient/0.10/zkclient-0.10.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/zkclient-0.10.jar"/>
+    <copy file="${basedir}/../repository/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/slf4j-api-1.6.1.jar"/>
+    <copy file="${basedir}/../repository/org/apache/zookeeper/zookeeper/3.4.8/zookeeper-3.4.8.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/zookeeper-3.4.8.jar"/>
+    <copy file="${basedir}/../repository/org/slf4j/slf4j-log4j12/1.6.1/slf4j-log4j12-1.6.1.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/slf4j-log4j12-1.6.1.jar"/>
+    <copy file="${basedir}/../repository/jline/jline/0.9.94/jline-0.9.94.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/jline-0.9.94.jar"/>
+    <copy file="${basedir}/../repository/io/netty/netty/3.7.0.Final/netty-3.7.0.Final.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/netty-3.7.0.Final.jar"/>
+    <copy file="${basedir}/../repository/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/commons-lang3-3.3.2.jar"/>
+    <copy file="${basedir}/../repository/commons-io/commons-io/1.3.2/commons-io-1.3.2.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/commons-io-1.3.2.jar"/>
+    <copy file="${basedir}/../repository/commons-net/commons-net/3.3/commons-net-3.3.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/commons-net-3.3.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-beans/4.3.7.RELEASE/spring-beans-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/spring-beans-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-web/4.3.7.RELEASE/spring-web-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/spring-web-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-webmvc/4.3.7.RELEASE/spring-webmvc-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/spring-webmvc-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-context/4.3.7.RELEASE/spring-context-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/spring-context-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-context-support/4.3.7.RELEASE/spring-context-support-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/spring-context-support-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-core/4.3.7.RELEASE/spring-core-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/spring-core-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-expression/4.3.7.RELEASE/spring-expression-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/spring-expression-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-aop/4.3.7.RELEASE/spring-aop-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/spring-aop-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-jdbc/4.3.7.RELEASE/spring-jdbc-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/spring-jdbc-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-tx/4.3.7.RELEASE/spring-tx-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/spring-tx-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-jms/4.3.7.RELEASE/spring-jms-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/spring-jms-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-messaging/4.3.7.RELEASE/spring-messaging-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/spring-messaging-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/apache/activemq/activemq-all/5.15.0/activemq-all-5.15.0.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/activemq-all-5.15.0.jar"/>
+    <copy file="${basedir}/../repository/org/aspectj/aspectjrt/1.8.10/aspectjrt-1.8.10.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/aspectjrt-1.8.10.jar"/>
+    <copy file="${basedir}/../repository/org/aspectj/aspectjweaver/1.8.10/aspectjweaver-1.8.10.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/aspectjweaver-1.8.10.jar"/>
+    <copy file="${basedir}/../repository/org/mybatis/mybatis/3.4.4/mybatis-3.4.4.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/mybatis-3.4.4.jar"/>
+    <copy file="${basedir}/../repository/org/mybatis/mybatis-spring/1.3.1/mybatis-spring-1.3.1.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/mybatis-spring-1.3.1.jar"/>
+    <copy file="${basedir}/../repository/com/fasterxml/jackson/core/jackson-annotations/2.8.7/jackson-annotations-2.8.7.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/jackson-annotations-2.8.7.jar"/>
+    <copy file="${basedir}/../repository/com/fasterxml/jackson/core/jackson-core/2.8.7/jackson-core-2.8.7.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/jackson-core-2.8.7.jar"/>
+    <copy file="${basedir}/../repository/com/fasterxml/jackson/core/jackson-databind/2.8.7/jackson-databind-2.8.7.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/jackson-databind-2.8.7.jar"/>
+    <copy file="${basedir}/../repository/commons-fileupload/commons-fileupload/1.3.2/commons-fileupload-1.3.2.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/commons-fileupload-1.3.2.jar"/>
+    <copy file="${basedir}/../repository/com/github/miemiedev/mybatis-paginator/1.2.15/mybatis-paginator-1.2.15.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/mybatis-paginator-1.2.15.jar"/>
+    <copy file="${basedir}/../repository/com/github/pagehelper/pagehelper/4.1.0/pagehelper-4.1.0.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/pagehelper-4.1.0.jar"/>
+    <copy file="${basedir}/../repository/com/github/jsqlparser/jsqlparser/0.9.4/jsqlparser-0.9.4.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/jsqlparser-0.9.4.jar"/>
+    <copy file="${basedir}/../repository/com/alibaba/druid/1.0.29/druid-1.0.29.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/druid-1.0.29.jar"/>
+    <copy file="${basedir}/../repository/log4j/log4j/1.2.17/log4j-1.2.17.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/log4j-1.2.17.jar"/>
+    <copy file="${basedir}/../repository/mysql/mysql-connector-java/5.1.42/mysql-connector-java-5.1.42.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/mysql-connector-java-5.1.42.jar"/>
+    <copy file="${basedir}/../repository/org/apache/solr/solr-solrj/4.10.4/solr-solrj-4.10.4.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/solr-solrj-4.10.4.jar"/>
+    <copy file="${basedir}/../repository/org/apache/httpcomponents/httpmime/4.3.1/httpmime-4.3.1.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/httpmime-4.3.1.jar"/>
+    <copy file="${basedir}/../repository/org/codehaus/woodstox/wstx-asl/3.2.7/wstx-asl-3.2.7.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/wstx-asl-3.2.7.jar"/>
+    <copy file="${basedir}/../repository/org/noggit/noggit/0.5/noggit-0.5.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/noggit-0.5.jar"/>
+    <copy file="${basedir}/../repository/redis/clients/jedis/2.9.0/jedis-2.9.0.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/jedis-2.9.0.jar"/>
+    <copy file="${basedir}/../repository/org/apache/commons/commons-pool2/2.4.2/commons-pool2-2.4.2.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/commons-pool2-2.4.2.jar"/>
+    <copy file="${basedir}/../repository/org/freemarker/freemarker/2.3.26-incubating/freemarker-2.3.26-incubating.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/freemarker-2.3.26-incubating.jar"/>
+    <copy file="${basedir}/../repository/org/quartz-scheduler/quartz/2.2.2/quartz-2.2.2.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/quartz-2.2.2.jar"/>
+    <copy file="${basedir}/../repository/c3p0/c3p0/0.9.1.1/c3p0-0.9.1.1.jar" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/lib/c3p0-0.9.1.1.jar"/>
+    <mkdir dir="${artifact.output.e3-web-order:war_exploded}/META-INF"/>
+    <copy file="${basedir}/e3-web-order/target/e3-web-order/META-INF/MANIFEST.MF" tofile="${artifact.output.e3-web-order:war_exploded}/META-INF/MANIFEST.MF"/>
+    <copy todir="${artifact.output.e3-web-order:war_exploded}">
+      <fileset dir="${basedir}/e3-web-order/src/main/webapp"/>
+    </copy>
+    <mkdir dir="${artifact.output.e3-web-order:war_exploded}/WEB-INF"/>
+    <copy file="${basedir}/e3-web-order/src/main/webapp/WEB-INF/web.xml" tofile="${artifact.output.e3-web-order:war_exploded}/WEB-INF/web.xml"/>
+  </target>
+  
+  <target name="artifact.e3-web-portal:war" depends="init.artifacts, artifact.e3-web-portal:war_exploded" description="Build &#39;e3-web-portal:war&#39; artifact">
+    <property name="artifact.temp.output.e3-web-portal:war" value="${artifacts.temp.dir}/e3_web_portal_war"/>
+    <mkdir dir="${artifact.temp.output.e3-web-portal:war}"/>
+    <zip destfile="${temp.jar.path.e3-web-portal.war}">
+      <zipfileset dir="${artifact.temp.output.e3-web-portal:war_exploded}"/>
+    </zip>
+    <copy file="${temp.jar.path.e3-web-portal.war}" tofile="${artifact.temp.output.e3-web-portal:war}/e3-web-portal.war"/>
+  </target>
+  
+  <target name="artifact.e3-web-portal:war_exploded" depends="init.artifacts, compile.module.e3-web-portal, compile.module.e3-common-config, compile.module.e3-common, compile.module.e3-api-content" description="Build &#39;e3-web-portal:war exploded&#39; artifact">
+    <mkdir dir="${artifact.output.e3-web-portal:war_exploded}"/>
+    <jar destfile="${temp.jar.path.e3-common-config-1.0-SNAPSHOT.jar5}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${e3-common-config.output.dir}"/>
+    </jar>
+    <jar destfile="${temp.jar.path.e3-common-1.0-SNAPSHOT.jar5}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${e3-common.output.dir}"/>
+    </jar>
+    <jar destfile="${temp.jar.path.e3-api-content-1.0-SNAPSHOT.jar2}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${e3-api-content.output.dir}"/>
+    </jar>
+    <mkdir dir="${artifact.output.e3-web-portal:war_exploded}/WEB-INF"/>
+    <mkdir dir="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/classes"/>
+    <copy todir="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/classes">
+      <fileset dir="${e3-web-portal.output.dir}"/>
+    </copy>
+    <mkdir dir="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib"/>
+    <copy file="${temp.jar.path.e3-common-config-1.0-SNAPSHOT.jar5}" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/e3-common-config-1.0-SNAPSHOT.jar"/>
+    <copy file="${temp.jar.path.e3-common-1.0-SNAPSHOT.jar5}" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/e3-common-1.0-SNAPSHOT.jar"/>
+    <copy file="${basedir}/../repository/fastdfs_client/fastdfs_client/1.25/fastdfs_client-1.25.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/fastdfs_client-1.25.jar"/>
+    <copy file="${basedir}/../repository/javax/servlet/jsp/jstl/jstl/1.2/jstl-1.2.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/jstl-1.2.jar"/>
+    <copy file="${temp.jar.path.e3-api-content-1.0-SNAPSHOT.jar2}" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/e3-api-content-1.0-SNAPSHOT.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-web/5.1.2.RELEASE/spring-web-5.1.2.RELEASE.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/spring-web-5.1.2.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/com/alibaba/dubbo/2.5.3/dubbo-2.5.3.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/dubbo-2.5.3.jar"/>
+    <copy file="${basedir}/../repository/org/javassist/javassist/3.15.0-GA/javassist-3.15.0-GA.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/javassist-3.15.0-GA.jar"/>
+    <copy file="${basedir}/../repository/org/jboss/netty/netty/3.2.5.Final/netty-3.2.5.Final.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/netty-3.2.5.Final.jar"/>
+    <copy file="${basedir}/../repository/org/apache/httpcomponents/httpclient/4.3.5/httpclient-4.3.5.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/httpclient-4.3.5.jar"/>
+    <copy file="${basedir}/../repository/org/apache/httpcomponents/httpcore/4.3.2/httpcore-4.3.2.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/httpcore-4.3.2.jar"/>
+    <copy file="${basedir}/../repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/commons-logging-1.1.3.jar"/>
+    <copy file="${basedir}/../repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/commons-codec-1.6.jar"/>
+    <copy file="${basedir}/../repository/com/101tec/zkclient/0.10/zkclient-0.10.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/zkclient-0.10.jar"/>
+    <copy file="${basedir}/../repository/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/slf4j-api-1.6.1.jar"/>
+    <copy file="${basedir}/../repository/org/apache/zookeeper/zookeeper/3.4.8/zookeeper-3.4.8.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/zookeeper-3.4.8.jar"/>
+    <copy file="${basedir}/../repository/org/slf4j/slf4j-log4j12/1.6.1/slf4j-log4j12-1.6.1.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/slf4j-log4j12-1.6.1.jar"/>
+    <copy file="${basedir}/../repository/jline/jline/0.9.94/jline-0.9.94.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/jline-0.9.94.jar"/>
+    <copy file="${basedir}/../repository/io/netty/netty/3.7.0.Final/netty-3.7.0.Final.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/netty-3.7.0.Final.jar"/>
+    <copy file="${basedir}/../repository/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/commons-lang3-3.3.2.jar"/>
+    <copy file="${basedir}/../repository/commons-io/commons-io/1.3.2/commons-io-1.3.2.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/commons-io-1.3.2.jar"/>
+    <copy file="${basedir}/../repository/commons-net/commons-net/3.3/commons-net-3.3.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/commons-net-3.3.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-beans/4.3.7.RELEASE/spring-beans-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/spring-beans-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-webmvc/4.3.7.RELEASE/spring-webmvc-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/spring-webmvc-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-context/4.3.7.RELEASE/spring-context-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/spring-context-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-context-support/4.3.7.RELEASE/spring-context-support-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/spring-context-support-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-core/4.3.7.RELEASE/spring-core-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/spring-core-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-expression/4.3.7.RELEASE/spring-expression-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/spring-expression-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-aop/4.3.7.RELEASE/spring-aop-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/spring-aop-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-jdbc/4.3.7.RELEASE/spring-jdbc-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/spring-jdbc-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-tx/4.3.7.RELEASE/spring-tx-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/spring-tx-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-jms/4.3.7.RELEASE/spring-jms-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/spring-jms-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-messaging/4.3.7.RELEASE/spring-messaging-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/spring-messaging-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/apache/activemq/activemq-all/5.15.0/activemq-all-5.15.0.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/activemq-all-5.15.0.jar"/>
+    <copy file="${basedir}/../repository/org/aspectj/aspectjrt/1.8.10/aspectjrt-1.8.10.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/aspectjrt-1.8.10.jar"/>
+    <copy file="${basedir}/../repository/org/aspectj/aspectjweaver/1.8.10/aspectjweaver-1.8.10.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/aspectjweaver-1.8.10.jar"/>
+    <copy file="${basedir}/../repository/org/mybatis/mybatis/3.4.4/mybatis-3.4.4.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/mybatis-3.4.4.jar"/>
+    <copy file="${basedir}/../repository/org/mybatis/mybatis-spring/1.3.1/mybatis-spring-1.3.1.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/mybatis-spring-1.3.1.jar"/>
+    <copy file="${basedir}/../repository/com/fasterxml/jackson/core/jackson-annotations/2.8.7/jackson-annotations-2.8.7.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/jackson-annotations-2.8.7.jar"/>
+    <copy file="${basedir}/../repository/com/fasterxml/jackson/core/jackson-core/2.8.7/jackson-core-2.8.7.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/jackson-core-2.8.7.jar"/>
+    <copy file="${basedir}/../repository/com/fasterxml/jackson/core/jackson-databind/2.8.7/jackson-databind-2.8.7.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/jackson-databind-2.8.7.jar"/>
+    <copy file="${basedir}/../repository/commons-fileupload/commons-fileupload/1.3.2/commons-fileupload-1.3.2.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/commons-fileupload-1.3.2.jar"/>
+    <copy file="${basedir}/../repository/com/github/miemiedev/mybatis-paginator/1.2.15/mybatis-paginator-1.2.15.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/mybatis-paginator-1.2.15.jar"/>
+    <copy file="${basedir}/../repository/com/github/pagehelper/pagehelper/4.1.0/pagehelper-4.1.0.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/pagehelper-4.1.0.jar"/>
+    <copy file="${basedir}/../repository/com/github/jsqlparser/jsqlparser/0.9.4/jsqlparser-0.9.4.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/jsqlparser-0.9.4.jar"/>
+    <copy file="${basedir}/../repository/com/alibaba/druid/1.0.29/druid-1.0.29.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/druid-1.0.29.jar"/>
+    <copy file="${basedir}/../repository/log4j/log4j/1.2.17/log4j-1.2.17.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/log4j-1.2.17.jar"/>
+    <copy file="${basedir}/../repository/mysql/mysql-connector-java/5.1.42/mysql-connector-java-5.1.42.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/mysql-connector-java-5.1.42.jar"/>
+    <copy file="${basedir}/../repository/org/apache/solr/solr-solrj/4.10.4/solr-solrj-4.10.4.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/solr-solrj-4.10.4.jar"/>
+    <copy file="${basedir}/../repository/org/apache/httpcomponents/httpmime/4.3.1/httpmime-4.3.1.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/httpmime-4.3.1.jar"/>
+    <copy file="${basedir}/../repository/org/codehaus/woodstox/wstx-asl/3.2.7/wstx-asl-3.2.7.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/wstx-asl-3.2.7.jar"/>
+    <copy file="${basedir}/../repository/org/noggit/noggit/0.5/noggit-0.5.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/noggit-0.5.jar"/>
+    <copy file="${basedir}/../repository/redis/clients/jedis/2.9.0/jedis-2.9.0.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/jedis-2.9.0.jar"/>
+    <copy file="${basedir}/../repository/org/apache/commons/commons-pool2/2.4.2/commons-pool2-2.4.2.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/commons-pool2-2.4.2.jar"/>
+    <copy file="${basedir}/../repository/org/freemarker/freemarker/2.3.26-incubating/freemarker-2.3.26-incubating.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/freemarker-2.3.26-incubating.jar"/>
+    <copy file="${basedir}/../repository/org/quartz-scheduler/quartz/2.2.2/quartz-2.2.2.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/quartz-2.2.2.jar"/>
+    <copy file="${basedir}/../repository/c3p0/c3p0/0.9.1.1/c3p0-0.9.1.1.jar" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/lib/c3p0-0.9.1.1.jar"/>
+    <mkdir dir="${artifact.output.e3-web-portal:war_exploded}/META-INF"/>
+    <copy file="${basedir}/e3-web-portal/target/e3-web-portal/META-INF/MANIFEST.MF" tofile="${artifact.output.e3-web-portal:war_exploded}/META-INF/MANIFEST.MF"/>
+    <copy todir="${artifact.output.e3-web-portal:war_exploded}">
+      <fileset dir="${basedir}/e3-web-portal/src/main/webapp"/>
+    </copy>
+    <mkdir dir="${artifact.output.e3-web-portal:war_exploded}/WEB-INF"/>
+    <copy file="${basedir}/e3-web-portal/src/main/webapp/WEB-INF/web.xml" tofile="${artifact.output.e3-web-portal:war_exploded}/WEB-INF/web.xml"/>
+  </target>
+  
+  <target name="artifact.e3-web-search:war" depends="init.artifacts, artifact.e3-web-search:war_exploded" description="Build &#39;e3-web-search:war&#39; artifact">
+    <property name="artifact.temp.output.e3-web-search:war" value="${artifacts.temp.dir}/e3_web_search_war"/>
+    <mkdir dir="${artifact.temp.output.e3-web-search:war}"/>
+    <zip destfile="${temp.jar.path.e3-web-search.war}">
+      <zipfileset dir="${artifact.temp.output.e3-web-search:war_exploded}"/>
+    </zip>
+    <copy file="${temp.jar.path.e3-web-search.war}" tofile="${artifact.temp.output.e3-web-search:war}/e3-web-search.war"/>
+  </target>
+  
+  <target name="artifact.e3-web-search:war_exploded" depends="init.artifacts, compile.module.e3-web-search, compile.module.e3-api-search, compile.module.e3-common, compile.module.e3-common-config, compile.module.e3-api-content" description="Build &#39;e3-web-search:war exploded&#39; artifact">
+    <mkdir dir="${artifact.output.e3-web-search:war_exploded}"/>
+    <jar destfile="${temp.jar.path.e3-api-search-1.0-SNAPSHOT.jar2}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${e3-api-search.output.dir}"/>
+    </jar>
+    <jar destfile="${temp.jar.path.e3-common-1.0-SNAPSHOT.jar6}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${e3-common.output.dir}"/>
+    </jar>
+    <jar destfile="${temp.jar.path.e3-common-config-1.0-SNAPSHOT.jar6}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${e3-common-config.output.dir}"/>
+    </jar>
+    <jar destfile="${temp.jar.path.e3-api-content-1.0-SNAPSHOT.jar3}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${e3-api-content.output.dir}"/>
+    </jar>
+    <mkdir dir="${artifact.output.e3-web-search:war_exploded}/WEB-INF"/>
+    <mkdir dir="${artifact.output.e3-web-search:war_exploded}/WEB-INF/classes"/>
+    <copy todir="${artifact.output.e3-web-search:war_exploded}/WEB-INF/classes">
+      <fileset dir="${e3-web-search.output.dir}"/>
+    </copy>
+    <mkdir dir="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib"/>
+    <copy file="${temp.jar.path.e3-api-search-1.0-SNAPSHOT.jar2}" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/e3-api-search-1.0-SNAPSHOT.jar"/>
+    <copy file="${temp.jar.path.e3-common-1.0-SNAPSHOT.jar6}" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/e3-common-1.0-SNAPSHOT.jar"/>
+    <copy file="${basedir}/../repository/fastdfs_client/fastdfs_client/1.25/fastdfs_client-1.25.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/fastdfs_client-1.25.jar"/>
+    <copy file="${temp.jar.path.e3-common-config-1.0-SNAPSHOT.jar6}" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/e3-common-config-1.0-SNAPSHOT.jar"/>
+    <copy file="${basedir}/../repository/javax/servlet/jsp/jstl/jstl/1.2/jstl-1.2.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/jstl-1.2.jar"/>
+    <copy file="${temp.jar.path.e3-api-content-1.0-SNAPSHOT.jar3}" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/e3-api-content-1.0-SNAPSHOT.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-webmvc/5.1.2.RELEASE/spring-webmvc-5.1.2.RELEASE.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/spring-webmvc-5.1.2.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/com/alibaba/dubbo/2.5.3/dubbo-2.5.3.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/dubbo-2.5.3.jar"/>
+    <copy file="${basedir}/../repository/org/javassist/javassist/3.15.0-GA/javassist-3.15.0-GA.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/javassist-3.15.0-GA.jar"/>
+    <copy file="${basedir}/../repository/org/jboss/netty/netty/3.2.5.Final/netty-3.2.5.Final.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/netty-3.2.5.Final.jar"/>
+    <copy file="${basedir}/../repository/org/apache/httpcomponents/httpclient/4.3.5/httpclient-4.3.5.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/httpclient-4.3.5.jar"/>
+    <copy file="${basedir}/../repository/org/apache/httpcomponents/httpcore/4.3.2/httpcore-4.3.2.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/httpcore-4.3.2.jar"/>
+    <copy file="${basedir}/../repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/commons-logging-1.1.3.jar"/>
+    <copy file="${basedir}/../repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/commons-codec-1.6.jar"/>
+    <copy file="${basedir}/../repository/com/101tec/zkclient/0.10/zkclient-0.10.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/zkclient-0.10.jar"/>
+    <copy file="${basedir}/../repository/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/slf4j-api-1.6.1.jar"/>
+    <copy file="${basedir}/../repository/org/apache/zookeeper/zookeeper/3.4.8/zookeeper-3.4.8.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/zookeeper-3.4.8.jar"/>
+    <copy file="${basedir}/../repository/org/slf4j/slf4j-log4j12/1.6.1/slf4j-log4j12-1.6.1.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/slf4j-log4j12-1.6.1.jar"/>
+    <copy file="${basedir}/../repository/jline/jline/0.9.94/jline-0.9.94.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/jline-0.9.94.jar"/>
+    <copy file="${basedir}/../repository/io/netty/netty/3.7.0.Final/netty-3.7.0.Final.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/netty-3.7.0.Final.jar"/>
+    <copy file="${basedir}/../repository/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/commons-lang3-3.3.2.jar"/>
+    <copy file="${basedir}/../repository/commons-io/commons-io/1.3.2/commons-io-1.3.2.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/commons-io-1.3.2.jar"/>
+    <copy file="${basedir}/../repository/commons-net/commons-net/3.3/commons-net-3.3.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/commons-net-3.3.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-beans/4.3.7.RELEASE/spring-beans-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/spring-beans-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-web/4.3.7.RELEASE/spring-web-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/spring-web-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-context/4.3.7.RELEASE/spring-context-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/spring-context-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-context-support/4.3.7.RELEASE/spring-context-support-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/spring-context-support-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-core/4.3.7.RELEASE/spring-core-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/spring-core-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-expression/4.3.7.RELEASE/spring-expression-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/spring-expression-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-aop/4.3.7.RELEASE/spring-aop-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/spring-aop-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-jdbc/4.3.7.RELEASE/spring-jdbc-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/spring-jdbc-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-tx/4.3.7.RELEASE/spring-tx-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/spring-tx-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-jms/4.3.7.RELEASE/spring-jms-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/spring-jms-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-messaging/4.3.7.RELEASE/spring-messaging-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/spring-messaging-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/apache/activemq/activemq-all/5.15.0/activemq-all-5.15.0.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/activemq-all-5.15.0.jar"/>
+    <copy file="${basedir}/../repository/org/aspectj/aspectjrt/1.8.10/aspectjrt-1.8.10.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/aspectjrt-1.8.10.jar"/>
+    <copy file="${basedir}/../repository/org/aspectj/aspectjweaver/1.8.10/aspectjweaver-1.8.10.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/aspectjweaver-1.8.10.jar"/>
+    <copy file="${basedir}/../repository/org/mybatis/mybatis/3.4.4/mybatis-3.4.4.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/mybatis-3.4.4.jar"/>
+    <copy file="${basedir}/../repository/org/mybatis/mybatis-spring/1.3.1/mybatis-spring-1.3.1.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/mybatis-spring-1.3.1.jar"/>
+    <copy file="${basedir}/../repository/com/fasterxml/jackson/core/jackson-annotations/2.8.7/jackson-annotations-2.8.7.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/jackson-annotations-2.8.7.jar"/>
+    <copy file="${basedir}/../repository/com/fasterxml/jackson/core/jackson-core/2.8.7/jackson-core-2.8.7.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/jackson-core-2.8.7.jar"/>
+    <copy file="${basedir}/../repository/com/fasterxml/jackson/core/jackson-databind/2.8.7/jackson-databind-2.8.7.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/jackson-databind-2.8.7.jar"/>
+    <copy file="${basedir}/../repository/commons-fileupload/commons-fileupload/1.3.2/commons-fileupload-1.3.2.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/commons-fileupload-1.3.2.jar"/>
+    <copy file="${basedir}/../repository/com/github/miemiedev/mybatis-paginator/1.2.15/mybatis-paginator-1.2.15.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/mybatis-paginator-1.2.15.jar"/>
+    <copy file="${basedir}/../repository/com/github/pagehelper/pagehelper/4.1.0/pagehelper-4.1.0.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/pagehelper-4.1.0.jar"/>
+    <copy file="${basedir}/../repository/com/github/jsqlparser/jsqlparser/0.9.4/jsqlparser-0.9.4.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/jsqlparser-0.9.4.jar"/>
+    <copy file="${basedir}/../repository/com/alibaba/druid/1.0.29/druid-1.0.29.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/druid-1.0.29.jar"/>
+    <copy file="${basedir}/../repository/log4j/log4j/1.2.17/log4j-1.2.17.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/log4j-1.2.17.jar"/>
+    <copy file="${basedir}/../repository/mysql/mysql-connector-java/5.1.42/mysql-connector-java-5.1.42.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/mysql-connector-java-5.1.42.jar"/>
+    <copy file="${basedir}/../repository/org/apache/solr/solr-solrj/4.10.4/solr-solrj-4.10.4.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/solr-solrj-4.10.4.jar"/>
+    <copy file="${basedir}/../repository/org/apache/httpcomponents/httpmime/4.3.1/httpmime-4.3.1.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/httpmime-4.3.1.jar"/>
+    <copy file="${basedir}/../repository/org/codehaus/woodstox/wstx-asl/3.2.7/wstx-asl-3.2.7.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/wstx-asl-3.2.7.jar"/>
+    <copy file="${basedir}/../repository/org/noggit/noggit/0.5/noggit-0.5.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/noggit-0.5.jar"/>
+    <copy file="${basedir}/../repository/redis/clients/jedis/2.9.0/jedis-2.9.0.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/jedis-2.9.0.jar"/>
+    <copy file="${basedir}/../repository/org/apache/commons/commons-pool2/2.4.2/commons-pool2-2.4.2.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/commons-pool2-2.4.2.jar"/>
+    <copy file="${basedir}/../repository/org/freemarker/freemarker/2.3.26-incubating/freemarker-2.3.26-incubating.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/freemarker-2.3.26-incubating.jar"/>
+    <copy file="${basedir}/../repository/org/quartz-scheduler/quartz/2.2.2/quartz-2.2.2.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/quartz-2.2.2.jar"/>
+    <copy file="${basedir}/../repository/c3p0/c3p0/0.9.1.1/c3p0-0.9.1.1.jar" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/lib/c3p0-0.9.1.1.jar"/>
+    <mkdir dir="${artifact.output.e3-web-search:war_exploded}/META-INF"/>
+    <copy file="${basedir}/e3-web-search/target/e3-web-search/META-INF/MANIFEST.MF" tofile="${artifact.output.e3-web-search:war_exploded}/META-INF/MANIFEST.MF"/>
+    <copy todir="${artifact.output.e3-web-search:war_exploded}">
+      <fileset dir="${basedir}/e3-web-search/src/main/webapp"/>
+    </copy>
+    <mkdir dir="${artifact.output.e3-web-search:war_exploded}/WEB-INF"/>
+    <copy file="${basedir}/e3-web-search/src/main/webapp/WEB-INF/web.xml" tofile="${artifact.output.e3-web-search:war_exploded}/WEB-INF/web.xml"/>
+  </target>
+  
+  <target name="artifact.e3-web-sso:war" depends="init.artifacts, artifact.e3-web-sso:war_exploded" description="Build &#39;e3-web-sso:war&#39; artifact">
+    <property name="artifact.temp.output.e3-web-sso:war" value="${artifacts.temp.dir}/e3_web_sso_war"/>
+    <mkdir dir="${artifact.temp.output.e3-web-sso:war}"/>
+    <zip destfile="${temp.jar.path.e3-web-sso.war}">
+      <zipfileset dir="${artifact.temp.output.e3-web-sso:war_exploded}"/>
+    </zip>
+    <copy file="${temp.jar.path.e3-web-sso.war}" tofile="${artifact.temp.output.e3-web-sso:war}/e3-web-sso.war"/>
+  </target>
+  
+  <target name="artifact.e3-web-sso:war_exploded" depends="init.artifacts, compile.module.e3-web-sso, compile.module.e3-common, compile.module.e3-common-config, compile.module.e3-api-user" description="Build &#39;e3-web-sso:war exploded&#39; artifact">
+    <mkdir dir="${artifact.output.e3-web-sso:war_exploded}"/>
+    <jar destfile="${temp.jar.path.e3-common-1.0-SNAPSHOT.jar7}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${e3-common.output.dir}"/>
+    </jar>
+    <jar destfile="${temp.jar.path.e3-common-config-1.0-SNAPSHOT.jar7}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${e3-common-config.output.dir}"/>
+    </jar>
+    <jar destfile="${temp.jar.path.e3-api-user-1.0-SNAPSHOT.jar4}" duplicate="preserve" filesetmanifest="mergewithoutmain">
+      <zipfileset dir="${e3-api-user.output.dir}"/>
+    </jar>
+    <mkdir dir="${artifact.output.e3-web-sso:war_exploded}/WEB-INF"/>
+    <mkdir dir="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/classes"/>
+    <copy todir="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/classes">
+      <fileset dir="${e3-web-sso.output.dir}"/>
+    </copy>
+    <mkdir dir="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib"/>
+    <copy file="${temp.jar.path.e3-common-1.0-SNAPSHOT.jar7}" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/e3-common-1.0-SNAPSHOT.jar"/>
+    <copy file="${basedir}/../repository/fastdfs_client/fastdfs_client/1.25/fastdfs_client-1.25.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/fastdfs_client-1.25.jar"/>
+    <copy file="${temp.jar.path.e3-common-config-1.0-SNAPSHOT.jar7}" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/e3-common-config-1.0-SNAPSHOT.jar"/>
+    <copy file="${basedir}/../repository/javax/servlet/jsp/jstl/jstl/1.2/jstl-1.2.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/jstl-1.2.jar"/>
+    <copy file="${temp.jar.path.e3-api-user-1.0-SNAPSHOT.jar4}" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/e3-api-user-1.0-SNAPSHOT.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-web/4.3.7.RELEASE/spring-web-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/spring-web-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/com/alibaba/dubbo/2.5.3/dubbo-2.5.3.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/dubbo-2.5.3.jar"/>
+    <copy file="${basedir}/../repository/org/javassist/javassist/3.15.0-GA/javassist-3.15.0-GA.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/javassist-3.15.0-GA.jar"/>
+    <copy file="${basedir}/../repository/org/jboss/netty/netty/3.2.5.Final/netty-3.2.5.Final.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/netty-3.2.5.Final.jar"/>
+    <copy file="${basedir}/../repository/org/apache/httpcomponents/httpclient/4.3.5/httpclient-4.3.5.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/httpclient-4.3.5.jar"/>
+    <copy file="${basedir}/../repository/org/apache/httpcomponents/httpcore/4.3.2/httpcore-4.3.2.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/httpcore-4.3.2.jar"/>
+    <copy file="${basedir}/../repository/commons-logging/commons-logging/1.1.3/commons-logging-1.1.3.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/commons-logging-1.1.3.jar"/>
+    <copy file="${basedir}/../repository/commons-codec/commons-codec/1.6/commons-codec-1.6.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/commons-codec-1.6.jar"/>
+    <copy file="${basedir}/../repository/com/101tec/zkclient/0.10/zkclient-0.10.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/zkclient-0.10.jar"/>
+    <copy file="${basedir}/../repository/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/slf4j-api-1.6.1.jar"/>
+    <copy file="${basedir}/../repository/org/apache/zookeeper/zookeeper/3.4.8/zookeeper-3.4.8.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/zookeeper-3.4.8.jar"/>
+    <copy file="${basedir}/../repository/org/slf4j/slf4j-log4j12/1.6.1/slf4j-log4j12-1.6.1.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/slf4j-log4j12-1.6.1.jar"/>
+    <copy file="${basedir}/../repository/jline/jline/0.9.94/jline-0.9.94.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/jline-0.9.94.jar"/>
+    <copy file="${basedir}/../repository/io/netty/netty/3.7.0.Final/netty-3.7.0.Final.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/netty-3.7.0.Final.jar"/>
+    <copy file="${basedir}/../repository/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/commons-lang3-3.3.2.jar"/>
+    <copy file="${basedir}/../repository/commons-io/commons-io/1.3.2/commons-io-1.3.2.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/commons-io-1.3.2.jar"/>
+    <copy file="${basedir}/../repository/commons-net/commons-net/3.3/commons-net-3.3.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/commons-net-3.3.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-beans/4.3.7.RELEASE/spring-beans-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/spring-beans-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-webmvc/4.3.7.RELEASE/spring-webmvc-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/spring-webmvc-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-context/4.3.7.RELEASE/spring-context-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/spring-context-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-context-support/4.3.7.RELEASE/spring-context-support-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/spring-context-support-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-core/4.3.7.RELEASE/spring-core-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/spring-core-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-expression/4.3.7.RELEASE/spring-expression-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/spring-expression-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-aop/4.3.7.RELEASE/spring-aop-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/spring-aop-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-jdbc/4.3.7.RELEASE/spring-jdbc-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/spring-jdbc-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-tx/4.3.7.RELEASE/spring-tx-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/spring-tx-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-jms/4.3.7.RELEASE/spring-jms-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/spring-jms-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/springframework/spring-messaging/4.3.7.RELEASE/spring-messaging-4.3.7.RELEASE.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/spring-messaging-4.3.7.RELEASE.jar"/>
+    <copy file="${basedir}/../repository/org/apache/activemq/activemq-all/5.15.0/activemq-all-5.15.0.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/activemq-all-5.15.0.jar"/>
+    <copy file="${basedir}/../repository/org/aspectj/aspectjrt/1.8.10/aspectjrt-1.8.10.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/aspectjrt-1.8.10.jar"/>
+    <copy file="${basedir}/../repository/org/aspectj/aspectjweaver/1.8.10/aspectjweaver-1.8.10.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/aspectjweaver-1.8.10.jar"/>
+    <copy file="${basedir}/../repository/org/mybatis/mybatis/3.4.4/mybatis-3.4.4.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/mybatis-3.4.4.jar"/>
+    <copy file="${basedir}/../repository/org/mybatis/mybatis-spring/1.3.1/mybatis-spring-1.3.1.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/mybatis-spring-1.3.1.jar"/>
+    <copy file="${basedir}/../repository/com/fasterxml/jackson/core/jackson-annotations/2.8.7/jackson-annotations-2.8.7.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/jackson-annotations-2.8.7.jar"/>
+    <copy file="${basedir}/../repository/com/fasterxml/jackson/core/jackson-core/2.8.7/jackson-core-2.8.7.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/jackson-core-2.8.7.jar"/>
+    <copy file="${basedir}/../repository/com/fasterxml/jackson/core/jackson-databind/2.8.7/jackson-databind-2.8.7.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/jackson-databind-2.8.7.jar"/>
+    <copy file="${basedir}/../repository/commons-fileupload/commons-fileupload/1.3.2/commons-fileupload-1.3.2.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/commons-fileupload-1.3.2.jar"/>
+    <copy file="${basedir}/../repository/com/github/miemiedev/mybatis-paginator/1.2.15/mybatis-paginator-1.2.15.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/mybatis-paginator-1.2.15.jar"/>
+    <copy file="${basedir}/../repository/com/github/pagehelper/pagehelper/4.1.0/pagehelper-4.1.0.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/pagehelper-4.1.0.jar"/>
+    <copy file="${basedir}/../repository/com/github/jsqlparser/jsqlparser/0.9.4/jsqlparser-0.9.4.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/jsqlparser-0.9.4.jar"/>
+    <copy file="${basedir}/../repository/com/alibaba/druid/1.0.29/druid-1.0.29.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/druid-1.0.29.jar"/>
+    <copy file="${basedir}/../repository/log4j/log4j/1.2.17/log4j-1.2.17.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/log4j-1.2.17.jar"/>
+    <copy file="${basedir}/../repository/mysql/mysql-connector-java/5.1.42/mysql-connector-java-5.1.42.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/mysql-connector-java-5.1.42.jar"/>
+    <copy file="${basedir}/../repository/org/apache/solr/solr-solrj/4.10.4/solr-solrj-4.10.4.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/solr-solrj-4.10.4.jar"/>
+    <copy file="${basedir}/../repository/org/apache/httpcomponents/httpmime/4.3.1/httpmime-4.3.1.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/httpmime-4.3.1.jar"/>
+    <copy file="${basedir}/../repository/org/codehaus/woodstox/wstx-asl/3.2.7/wstx-asl-3.2.7.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/wstx-asl-3.2.7.jar"/>
+    <copy file="${basedir}/../repository/org/noggit/noggit/0.5/noggit-0.5.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/noggit-0.5.jar"/>
+    <copy file="${basedir}/../repository/redis/clients/jedis/2.9.0/jedis-2.9.0.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/jedis-2.9.0.jar"/>
+    <copy file="${basedir}/../repository/org/apache/commons/commons-pool2/2.4.2/commons-pool2-2.4.2.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/commons-pool2-2.4.2.jar"/>
+    <copy file="${basedir}/../repository/org/freemarker/freemarker/2.3.26-incubating/freemarker-2.3.26-incubating.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/freemarker-2.3.26-incubating.jar"/>
+    <copy file="${basedir}/../repository/org/quartz-scheduler/quartz/2.2.2/quartz-2.2.2.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/quartz-2.2.2.jar"/>
+    <copy file="${basedir}/../repository/c3p0/c3p0/0.9.1.1/c3p0-0.9.1.1.jar" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/lib/c3p0-0.9.1.1.jar"/>
+    <mkdir dir="${artifact.output.e3-web-sso:war_exploded}/META-INF"/>
+    <copy file="${basedir}/e3-web-sso/target/e3-web-sso/META-INF/MANIFEST.MF" tofile="${artifact.output.e3-web-sso:war_exploded}/META-INF/MANIFEST.MF"/>
+    <copy todir="${artifact.output.e3-web-sso:war_exploded}">
+      <fileset dir="${basedir}/e3-web-sso/src/main/webapp"/>
+    </copy>
+    <mkdir dir="${artifact.output.e3-web-sso:war_exploded}/WEB-INF"/>
+    <copy file="${basedir}/e3-web-sso/src/main/webapp/WEB-INF/web.xml" tofile="${artifact.output.e3-web-sso:war_exploded}/WEB-INF/web.xml"/>
+  </target>
+  
+  <target name="build.all.artifacts" depends="artifact.e3-web-cart:war, artifact.e3-web-cart:war_exploded, artifact.e3-web-item:war, artifact.e3-web-item:war_exploded, artifact.e3-web-manager:war, artifact.e3-web-manager:war_exploded, artifact.e3-web-order:war, artifact.e3-web-order:war_exploded, artifact.e3-web-portal:war, artifact.e3-web-portal:war_exploded, artifact.e3-web-search:war, artifact.e3-web-search:war_exploded, artifact.e3-web-sso:war, artifact.e3-web-sso:war_exploded" description="Build all artifacts">
+    <mkdir dir="${artifact.output.e3-web-cart:war}"/>
+    <copy todir="${artifact.output.e3-web-cart:war}">
+      <fileset dir="${artifact.temp.output.e3-web-cart:war}"/>
+    </copy>
+    <mkdir dir="${artifact.output.e3-web-item:war}"/>
+    <copy todir="${artifact.output.e3-web-item:war}">
+      <fileset dir="${artifact.temp.output.e3-web-item:war}"/>
+    </copy>
+    <mkdir dir="${artifact.output.e3-web-manager:war}"/>
+    <copy todir="${artifact.output.e3-web-manager:war}">
+      <fileset dir="${artifact.temp.output.e3-web-manager:war}"/>
+    </copy>
+    <mkdir dir="${artifact.output.e3-web-order:war}"/>
+    <copy todir="${artifact.output.e3-web-order:war}">
+      <fileset dir="${artifact.temp.output.e3-web-order:war}"/>
+    </copy>
+    <mkdir dir="${artifact.output.e3-web-portal:war}"/>
+    <copy todir="${artifact.output.e3-web-portal:war}">
+      <fileset dir="${artifact.temp.output.e3-web-portal:war}"/>
+    </copy>
+    <mkdir dir="${artifact.output.e3-web-search:war}"/>
+    <copy todir="${artifact.output.e3-web-search:war}">
+      <fileset dir="${artifact.temp.output.e3-web-search:war}"/>
+    </copy>
+    <mkdir dir="${artifact.output.e3-web-sso:war}"/>
+    <copy todir="${artifact.output.e3-web-sso:war}">
+      <fileset dir="${artifact.temp.output.e3-web-sso:war}"/>
+    </copy>
+    
+    <!-- Delete temporary files -->
+    <delete dir="${artifacts.temp.dir}"/>
+  </target>
+  
+  <target name="all" depends="build.modules, build.all.artifacts" description="build all"/>
+</project>
