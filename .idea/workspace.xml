@@ -1,527 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="714aca99-1fa5-465f-97cf-74898e8e3207" name="Default Changelist" comment="firstgitlab">
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2019-04-11T102711.404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2019-04-11T103037-1.404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2019-04-11T103037-2.404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2019-04-11T103037.404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2019-04-11T103038-1.404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2019-04-11T103038-2.404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2019-04-11T103038.404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2019-04-11T103246.404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2019-04-11T103247.404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2019-04-12T022746.405.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2019-04-12T022906.500.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2019-04-12T023335.200.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2019-04-12T023407.200.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2019-04-12T023416-1.200.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/2019-04-12T023416.200.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-content/target/classes/com/e3/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-content/target/classes/com/e3/service/content/api/ContentService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-content/target/classes/com/e3/service/content/pojo/TbContent.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-content/target/classes/com/e3/service/content/pojo/TbContentCategory.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-content/target/classes/com/e3/service/content/pojo/TbContentCategoryExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-content/target/classes/com/e3/service/content/pojo/TbContentCategoryExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-content/target/classes/com/e3/service/content/pojo/TbContentCategoryExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-content/target/classes/com/e3/service/content/pojo/TbContentCategoryExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-content/target/classes/com/e3/service/content/pojo/TbContentExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-content/target/classes/com/e3/service/content/pojo/TbContentExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-content/target/classes/com/e3/service/content/pojo/TbContentExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-content/target/classes/com/e3/service/content/pojo/TbContentExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-content/target/e3-api-content-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-content/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-content/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-content/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-content/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-content/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-content/target/surefire-reports/TEST-com.e3.AppTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-content/target/surefire-reports/com.e3.AppTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-content/target/test-classes/com/e3/AppTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/classes/com/e3/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/classes/com/e3/service/goods/api/ItemParamService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/classes/com/e3/service/goods/api/ItemService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/classes/com/e3/service/goods/api/TbItemCatService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/classes/com/e3/service/goods/pojo/TbItem.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/classes/com/e3/service/goods/pojo/TbItemCat.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/classes/com/e3/service/goods/pojo/TbItemCatExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/classes/com/e3/service/goods/pojo/TbItemCatExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/classes/com/e3/service/goods/pojo/TbItemCatExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/classes/com/e3/service/goods/pojo/TbItemCatExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/classes/com/e3/service/goods/pojo/TbItemDesc.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/classes/com/e3/service/goods/pojo/TbItemDescExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/classes/com/e3/service/goods/pojo/TbItemDescExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/classes/com/e3/service/goods/pojo/TbItemDescExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/classes/com/e3/service/goods/pojo/TbItemDescExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/classes/com/e3/service/goods/pojo/TbItemExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/classes/com/e3/service/goods/pojo/TbItemExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/classes/com/e3/service/goods/pojo/TbItemExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/classes/com/e3/service/goods/pojo/TbItemExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/classes/com/e3/service/goods/pojo/TbItemParam.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/classes/com/e3/service/goods/pojo/TbItemParamExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/classes/com/e3/service/goods/pojo/TbItemParamExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/classes/com/e3/service/goods/pojo/TbItemParamExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/classes/com/e3/service/goods/pojo/TbItemParamExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/classes/com/e3/service/goods/pojo/TbItemParamItem.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/classes/com/e3/service/goods/pojo/TbItemParamItemExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/classes/com/e3/service/goods/pojo/TbItemParamItemExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/classes/com/e3/service/goods/pojo/TbItemParamItemExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/classes/com/e3/service/goods/pojo/TbItemParamItemExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/e3-api-goods-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/surefire-reports/TEST-com.e3.AppTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/surefire-reports/com.e3.AppTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-goods/target/test-classes/com/e3/AppTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-order/target/classes/com/e3/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-order/target/classes/com/e3/service/order/api/OrderService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-order/target/classes/com/e3/service/order/pojo/OrderInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-order/target/classes/com/e3/service/order/pojo/TbOrder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-order/target/classes/com/e3/service/order/pojo/TbOrderExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-order/target/classes/com/e3/service/order/pojo/TbOrderExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-order/target/classes/com/e3/service/order/pojo/TbOrderExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-order/target/classes/com/e3/service/order/pojo/TbOrderExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-order/target/classes/com/e3/service/order/pojo/TbOrderItem.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-order/target/classes/com/e3/service/order/pojo/TbOrderItemExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-order/target/classes/com/e3/service/order/pojo/TbOrderItemExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-order/target/classes/com/e3/service/order/pojo/TbOrderItemExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-order/target/classes/com/e3/service/order/pojo/TbOrderItemExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-order/target/classes/com/e3/service/order/pojo/TbOrderShipping.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-order/target/classes/com/e3/service/order/pojo/TbOrderShippingExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-order/target/classes/com/e3/service/order/pojo/TbOrderShippingExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-order/target/classes/com/e3/service/order/pojo/TbOrderShippingExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-order/target/classes/com/e3/service/order/pojo/TbOrderShippingExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-order/target/e3-api-order-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-order/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-order/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-order/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-order/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-order/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-order/target/surefire-reports/TEST-com.e3.AppTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-order/target/surefire-reports/com.e3.AppTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-order/target/test-classes/com/e3/AppTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-search/target/classes/com/e3/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-search/target/classes/com/e3/service/search/api/SearchService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-search/target/classes/com/e3/service/search/pojo/SearchPojo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-search/target/classes/com/e3/service/search/pojo/SearchResult.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-search/target/e3-api-search-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-search/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-search/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-search/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-search/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-search/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-search/target/surefire-reports/TEST-com.e3.AppTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-search/target/surefire-reports/com.e3.AppTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-search/target/test-classes/com/e3/AppTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/service/user/api/UserService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/service/user/pojo/ActiveUser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/service/user/pojo/SysPermission.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/service/user/pojo/SysPermissionExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/service/user/pojo/SysPermissionExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/service/user/pojo/SysPermissionExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/service/user/pojo/SysPermissionExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/service/user/pojo/SysRole.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/service/user/pojo/SysRoleExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/service/user/pojo/SysRoleExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/service/user/pojo/SysRoleExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/service/user/pojo/SysRoleExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/service/user/pojo/SysRolePermission.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/service/user/pojo/SysRolePermissionExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/service/user/pojo/SysRolePermissionExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/service/user/pojo/SysRolePermissionExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/service/user/pojo/SysRolePermissionExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/service/user/pojo/SysUser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/service/user/pojo/SysUserExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/service/user/pojo/SysUserExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/service/user/pojo/SysUserExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/service/user/pojo/SysUserExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/service/user/pojo/SysUserRole.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/service/user/pojo/SysUserRoleExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/service/user/pojo/SysUserRoleExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/service/user/pojo/SysUserRoleExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/service/user/pojo/SysUserRoleExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/service/user/pojo/TbUser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/service/user/pojo/TbUserExample$Criteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/service/user/pojo/TbUserExample$Criterion.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/service/user/pojo/TbUserExample$GeneratedCriteria.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/classes/com/e3/service/user/pojo/TbUserExample.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/e3-api-user-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/surefire-reports/TEST-com.e3.AppTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/surefire-reports/com.e3.AppTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-api-user/target/test-classes/com/e3/AppTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common-config/target/classes/com/e3/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common-config/target/classes/system.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common-config/target/e3-common-config-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common-config/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common-config/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common-config/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common-config/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common-config/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common-config/target/surefire-reports/TEST-com.e3.AppTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common-config/target/surefire-reports/com.e3.AppTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common-config/target/test-classes/com/e3/AppTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common/target/classes/com/e3/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common/target/classes/com/e3/jedis/dao/JedisClient.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common/target/classes/com/e3/jedis/dao/impl/JedisClientCluster.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common/target/classes/com/e3/jedis/dao/impl/JedisClientPool.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common/target/classes/com/e3/util/common/CookieUtils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common/target/classes/com/e3/util/common/E3Result.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common/target/classes/com/e3/util/common/FastDFSClient.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common/target/classes/com/e3/util/common/FtpUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common/target/classes/com/e3/util/common/HttpClientUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common/target/classes/com/e3/util/common/IDUtils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common/target/classes/com/e3/util/common/JsonUtils.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common/target/classes/com/e3/util/common/ResourcesUtil.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common/target/classes/com/e3/util/dto/EUDatagridResult.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common/target/classes/com/e3/util/dto/TreeResult.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common/target/classes/jedis-client.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common/target/e3-common-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common/target/surefire-reports/TEST-com.e3.AppTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common/target/surefire-reports/com.e3.AppTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-common/target/test-classes/com/e3/AppTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-content/target/classes/com/e3/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-content/target/classes/com/e3/service/content/ContentServiceProvider.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-content/target/classes/com/e3/service/content/impl/ContentServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-content/target/classes/com/e3/service/content/mapper/TbContentCategoryMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-content/target/classes/com/e3/service/content/mapper/TbContentMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-content/target/classes/db.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-content/target/classes/dubbo/spring-dubbo-provider.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-content/target/classes/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-content/target/classes/mybatis/mapper/TbContentCategoryMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-content/target/classes/mybatis/mapper/TbContentMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-content/target/classes/mybatis/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-content/target/classes/spring/spring-context.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-content/target/e3-service-content-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-content/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-content/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-content/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-content/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-content/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-content/target/surefire-reports/TEST-com.e3.AppTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-content/target/surefire-reports/com.e3.AppTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-content/target/test-classes/com/e3/AppTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-goods/target/classes/com/e3/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-goods/target/classes/com/e3/service/goods/GoodsServiceProvider.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-goods/target/classes/com/e3/service/goods/api/impl/ItemParamServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-goods/target/classes/com/e3/service/goods/api/impl/ItemServiceImpl$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-goods/target/classes/com/e3/service/goods/api/impl/ItemServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-goods/target/classes/com/e3/service/goods/api/impl/TbItemCatServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-goods/target/classes/com/e3/service/goods/mapper/TbItemCatMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-goods/target/classes/com/e3/service/goods/mapper/TbItemDescMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-goods/target/classes/com/e3/service/goods/mapper/TbItemMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-goods/target/classes/com/e3/service/goods/mapper/TbItemParamItemMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-goods/target/classes/com/e3/service/goods/mapper/TbItemParamMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-goods/target/classes/db.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-goods/target/classes/dubbo/spring-dubbo-provider.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-goods/target/classes/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-goods/target/classes/mybatis/mapper/TbItemCatMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-goods/target/classes/mybatis/mapper/TbItemDescMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-goods/target/classes/mybatis/mapper/TbItemMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-goods/target/classes/mybatis/mapper/TbItemParamItemMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-goods/target/classes/mybatis/mapper/TbItemParamMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-goods/target/classes/mybatis/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-goods/target/classes/spring/spring-activemq.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-goods/target/classes/spring/spring-context.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-goods/target/e3-service-goods-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-goods/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-goods/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-goods/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-goods/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-goods/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-goods/target/surefire-reports/TEST-com.e3.AppTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-goods/target/surefire-reports/com.e3.AppTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-goods/target/test-classes/com/e3/AppTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-order/target/classes/com/e3/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-order/target/classes/com/e3/service/order/OrderServiceProvider.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-order/target/classes/com/e3/service/order/api/impl/OrderServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-order/target/classes/com/e3/service/order/mapper/TbOrderItemMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-order/target/classes/com/e3/service/order/mapper/TbOrderMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-order/target/classes/com/e3/service/order/mapper/TbOrderShippingMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-order/target/classes/db.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-order/target/classes/dubbo/spring-dubbo-provider.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-order/target/classes/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-order/target/classes/mybatis/mapper/TbOrderItemMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-order/target/classes/mybatis/mapper/TbOrderMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-order/target/classes/mybatis/mapper/TbOrderShippingMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-order/target/classes/mybatis/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-order/target/classes/spring/spring-context.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-order/target/e3-service-order-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-order/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-order/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-order/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-order/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-order/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-order/target/surefire-reports/TEST-com.e3.AppTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-order/target/surefire-reports/com.e3.AppTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-order/target/test-classes/com/e3/AppTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-search/target/classes/com/e3/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-search/target/classes/com/e3/SearchServiceProvider.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-search/target/classes/com/e3/service/search/dao/SearchDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-search/target/classes/com/e3/service/search/dao/impl/SearchImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-search/target/classes/com/e3/service/search/impl/SearchServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-search/target/classes/com/e3/service/search/listener/ItemChangeListener.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-search/target/classes/com/e3/service/search/mapper/SearchMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-search/target/classes/db.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-search/target/classes/dubbo/spring-dubbo-provider.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-search/target/classes/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-search/target/classes/mybatis/mapper/SearchMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-search/target/classes/mybatis/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-search/target/classes/spring/spring-activemq.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-search/target/classes/spring/spring-context.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-search/target/e3-service-search-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-search/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-search/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-search/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-search/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-search/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-search/target/surefire-reports/TEST-com.e3.AppTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-search/target/surefire-reports/com.e3.AppTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-search/target/test-classes/com/e3/AppTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-user/target/classes/com/e3/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-user/target/classes/com/e3/service/user/UserServiceProvider.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-user/target/classes/com/e3/service/user/api/impl/UserServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-user/target/classes/com/e3/service/user/mapper/MenusPermissionMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-user/target/classes/com/e3/service/user/mapper/SysPermissionMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-user/target/classes/com/e3/service/user/mapper/SysRoleMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-user/target/classes/com/e3/service/user/mapper/SysRolePermissionMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-user/target/classes/com/e3/service/user/mapper/SysUserMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-user/target/classes/com/e3/service/user/mapper/SysUserRoleMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-user/target/classes/com/e3/service/user/mapper/TbUserMapper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-user/target/classes/db.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-user/target/classes/dubbo/spring-dubbo-provider.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-user/target/classes/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-user/target/classes/mybatis/mapper/SysPermissionMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-user/target/classes/mybatis/mapper/SysRoleMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-user/target/classes/mybatis/mapper/SysRolePermissionMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-user/target/classes/mybatis/mapper/SysUserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-user/target/classes/mybatis/mapper/SysUserRoleMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-user/target/classes/mybatis/mapper/TbUserMapper.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-user/target/classes/mybatis/mybatis-config.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-user/target/classes/spring/spring-context.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-user/target/e3-service-user-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-user/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-user/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-user/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-user/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-user/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-user/target/surefire-reports/TEST-com.e3.AppTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-user/target/surefire-reports/com.e3.AppTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-service-user/target/test-classes/com/e3/AppTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-cart/target/classes/com/e3/web/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-cart/target/classes/com/e3/web/cart/CartController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-cart/target/classes/com/e3/web/cart/service/CartService.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-cart/target/classes/com/e3/web/cart/service/impl/CartServiceImpl.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-cart/target/classes/com/e3/web/interceptor/CartInterceptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-cart/target/classes/dubbo/spring-dubbo-consumer-goods.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-cart/target/classes/dubbo/spring-dubbo-consumer.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-cart/target/classes/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-cart/target/classes/spring/spring-context.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-cart/target/classes/spring/springmvc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-cart/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-cart/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-cart/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/cartSuccess_jsp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-cart/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/cartSuccess_jsp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-cart/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/cart_jsp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-cart/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/cart_jsp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-cart/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/footer_jsp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-cart/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/footer_jsp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-cart/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/header1_jsp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-cart/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/header1_jsp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-cart/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/header_jsp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-cart/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/header_jsp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-cart/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/mainmenu_jsp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-cart/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/mainmenu_jsp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-cart/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/shortcut_jsp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-cart/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/shortcut_jsp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-item/target/classes/com/e3/item/test/FreeMarkerTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-item/target/classes/com/e3/item/test/Stu.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-item/target/classes/com/e3/web/item/controller/ItemController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-item/target/classes/com/e3/web/item/controller/ItemListener.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-item/target/classes/dubbo/spring-dubbo-consumer-goods.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-item/target/classes/dubbo/spring-dubbo-consumer.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-item/target/classes/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-item/target/classes/spring/spring-activemq.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-item/target/classes/spring/spring-context.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-item/target/classes/spring/springmvc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-item/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-item/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-item/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/footer_jsp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-item/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/footer_jsp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-item/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/header_jsp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-item/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/header_jsp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-item/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/mainmenu_jsp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-item/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/mainmenu_jsp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-item/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/shortcut_jsp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-item/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/shortcut_jsp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-item/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/item_jsp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-item/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/item_jsp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-manager/target/classes/anonyURL.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-manager/target/classes/client.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-manager/target/classes/com/e3/web/item/controller/ContentController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-manager/target/classes/com/e3/web/item/controller/IndexSearchController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-manager/target/classes/com/e3/web/item/controller/ItemCatController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-manager/target/classes/com/e3/web/item/controller/ItemController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-manager/target/classes/com/e3/web/item/controller/ItemParamController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-manager/target/classes/com/e3/web/item/controller/PageController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-manager/target/classes/com/e3/web/item/controller/PictureController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-manager/target/classes/com/e3/web/item/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-manager/target/classes/com/e3/web/manager/interceptor/LoginInterceptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-manager/target/classes/com/e3/web/test/TestFastDFS.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-manager/target/classes/db.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-manager/target/classes/dubbo/spring-dubbo-consumer-content.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-manager/target/classes/dubbo/spring-dubbo-consumer-goods.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-manager/target/classes/dubbo/spring-dubbo-consumer-search.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-manager/target/classes/dubbo/spring-dubbo-consumer-user.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-manager/target/classes/dubbo/spring-dubbo-consumer.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-manager/target/classes/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-manager/target/classes/spring/spring-context.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-manager/target/classes/spring/springmvc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-manager/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-manager/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-manager/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/index_jsp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-manager/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/index_jsp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-manager/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/item_002dadd_jsp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-manager/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/item_002dadd_jsp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-order/target/classes/com/e3/web/controller/OrderController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-order/target/classes/com/e3/web/interceptor/MyInterceptor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-order/target/classes/com/e3/web/jobs/TestQuartz.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-order/target/classes/dubbo/spring-dubbo-consumer-order.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-order/target/classes/dubbo/spring-dubbo-consumer.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-order/target/classes/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-order/target/classes/spring/spring-context.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-order/target/classes/spring/springmvc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-order/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-order/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-order/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/footer_jsp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-order/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/footer_jsp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-order/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/header_jsp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-order/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/header_jsp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-order/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/shortcut_jsp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-order/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/shortcut_jsp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-order/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/order_002dcart_jsp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-order/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/order_002dcart_jsp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-order/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/success_jsp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-order/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/success_jsp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-portal/target/classes/com/e3/web/portal/PageController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-portal/target/classes/dubbo/spring-dubbo-consumer-content.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-portal/target/classes/dubbo/spring-dubbo-consumer.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-portal/target/classes/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-portal/target/classes/spring/spring-context.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-portal/target/classes/spring/springmvc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-portal/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-portal/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-portal/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/footer_jsp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-portal/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/footer_jsp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-portal/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/header_jsp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-portal/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/header_jsp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-portal/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/mainmenu_jsp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-portal/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/mainmenu_jsp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-portal/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/shortcut_jsp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-portal/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/shortcut_jsp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-portal/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/index_jsp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-portal/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/index_jsp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-search/target/classes/com/e3/exception/GlobalExceptionResolver.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-search/target/classes/com/e3/web/item/controller/SearchController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-search/target/classes/dubbo/spring-dubbo-consumer-search.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-search/target/classes/dubbo/spring-dubbo-consumer.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-search/target/classes/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-search/target/classes/spring/spring-context.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-search/target/classes/spring/springmvc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-search/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-search/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-search/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/footer_jsp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-search/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/footer_jsp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-search/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/header_jsp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-search/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/header_jsp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-search/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/mainmenu_jsp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-search/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/mainmenu_jsp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-search/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/shortcut_jsp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-search/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/commons/shortcut_jsp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-search/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/search_jsp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-search/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/search_jsp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-sso/target/classes/com/e3/user/controller/PageController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-sso/target/classes/com/e3/user/controller/UserController.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-sso/target/classes/dubbo/spring-dubbo-consumer-user.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-sso/target/classes/dubbo/spring-dubbo-consumer.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-sso/target/classes/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-sso/target/classes/spring/spring-context.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-sso/target/classes/spring/springmvc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-sso/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-sso/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-sso/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/login_jsp.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/e3-web-sso/target/tmp/jsp/org/apache/jsp/WEB_002dINF/jsp/login_jsp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/com/e3/App.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/fdfs_client.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/common/Base64.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/common/IniFileReader.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/common/MyException.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/common/NameValuePair.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/ClientGlobal.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/DownloadCallback.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/DownloadStream.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/FileInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/ProtoCommon$RecvHeaderInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/ProtoCommon$RecvPackageInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/ProtoCommon.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/ProtoStructDecoder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/ServerInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/StorageClient$UploadBuff.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/StorageClient.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/StorageClient1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/StorageServer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/StructBase$FieldInfo.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/StructBase.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/StructGroupStat.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/StructStorageStat.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/TrackerClient.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/TrackerGroup.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/TrackerServer.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/UploadCallback.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/UploadStream.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/test/DownloadFileWriter.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/test/Monitor.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/test/Test.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/test/Test1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/test/TestAppender.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/test/TestAppender1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/test/TestClient.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/test/TestClient1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/test/TestLoad$DownloadFileDiscard.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/test/TestLoad$DownloadThread.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/test/TestLoad$Downloader.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/test/TestLoad$UploadThread.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/test/TestLoad$Uploader.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/test/TestLoad.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/classes/org/csource/fastdfs/test/UploadLocalFileSender.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/fastdfs_client-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/maven-archiver/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/surefire-reports/TEST-com.e3.AppTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/surefire-reports/com.e3.AppTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fastdfs_client/target/test-classes/com/e3/AppTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/e3-web-manager/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/e3-web-manager/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="714aca99-1fa5-465f-97cf-74898e8e3207" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/e3-common-config/target/" />
     <ignored path="$PROJECT_DIR$/e3-common/target/" />
@@ -792,7 +272,7 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="settings.github" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -1379,8 +859,16 @@
       <workItem from="1555828008334" duration="689000" />
       <workItem from="1555856744231" duration="994000" />
       <workItem from="1555859749030" duration="596000" />
-      <workItem from="1556245822753" duration="1141000" />
+      <workItem from="1556245822753" duration="2318000" />
     </task>
+    <task id="LOCAL-00001" summary="firstgitlab">
+      <created>1556247075425</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1556247075425</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1416,7 +904,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="253437000" />
+    <option name="totallyTimeSpent" value="254614000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1445,7 +933,7 @@
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" weight="0.32874355" />
       <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.32896653" />
       <window_info anchor="bottom" id="Debug" order="8" sideWeight="0.5026846" weight="0.57933044" />
       <window_info anchor="bottom" id="Problems" order="9" sideWeight="0.49932885" weight="0.3280116" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
@@ -1506,6 +994,36 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="firstgitlab" />
+    <option name="LAST_COMMIT_MESSAGE" value="firstgitlab" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/e3-service-user/pom.xml">
