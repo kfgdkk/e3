@@ -1,0 +1,120 @@
+POST http://localhost:8084/user/token/2cf66c6d-4d92-46e2-b6e0-9b2a2db1b0c3?username=xxx&password=123
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-12T023416-1.200.json
+
+###
+
+POST http://localhost:8084/user/token/2cf66c6d-4d92-46e2-b6e0-9b2a2db1b0c3?username=xxx&password=123
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-12T023416.200.json
+
+###
+
+GET http://localhost:8084/user/token/2cf66c6d-4d92-46e2-b6e0-9b2a2db1b0c3?username=xxx&password=123
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-12T023407.200.json
+
+###
+
+POST http://localhost:8084/user/login/?username=xxx&password=123
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-12T023335.200.json
+
+###
+
+POST http://localhost:8084/user/login/?username=xxx&password=123
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-12T022906.500.html
+
+###
+
+GET http://localhost:8084/user/login/?username=xxx&password=123
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-12T022746.405.html
+
+###
+
+GET http://localhost:8084/user/check/lisi/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-11T103247.404.html
+
+###
+
+GET http://localhost:8084/user/check/lisi/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-11T103246.404.html
+
+###
+
+GET http://localhost:8084/user/check/lisi/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-11T103038-2.404.html
+
+###
+
+GET http://localhost:8084/user/check/lisi/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-11T103038-1.404.html
+
+###
+
+GET http://localhost:8084/user/check/lisi/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-11T103038.404.html
+
+###
+
+GET http://localhost:8084/user/check/lisi/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-11T103037-2.404.html
+
+###
+
+GET http://localhost:8084/user/check/lisi/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-11T103037-1.404.html
+
+###
+
+GET http://localhost:8084/user/check/lisi/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-11T103037.404.html
+
+###
+
+GET http://localhost:8084/user/check/lisi/1
+Accept: */*
+Cache-Control: no-cache
+
+<> 2019-04-11T102711.404.html
+
+###
+

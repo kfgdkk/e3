@@ -11,21 +11,21 @@
         <module name="e3-web-cart" />
         <module name="e3-api-order" />
         <module name="fastdfs_client" />
+        <module name="e3-service-content" />
         <module name="e3-web-search" />
+        <module name="e3-api-goods" />
         <module name="e3-web-portal" />
         <module name="e3-common-config" />
-        <module name="e3-api-content" />
         <module name="e3-web-manager" />
-        <module name="e3-web-sso" />
         <module name="e3-service-search" />
         <module name="e3-common" />
         <module name="e3-web-item" />
-        <module name="e3-api-search" />
         <module name="e3-service-goods" />
-        <module name="e3-service-content" />
-        <module name="e3-api-user" />
-        <module name="e3-api-goods" />
         <module name="e3-service-order" />
+        <module name="e3-api-search" />
+        <module name="e3-api-user" />
+        <module name="e3-api-content" />
+        <module name="e3-web-sso" />
       </profile>
     </annotationProcessing>
   </component>

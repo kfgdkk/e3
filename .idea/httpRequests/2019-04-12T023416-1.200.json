@@ -1,0 +1,13 @@
+{
+  "status": 200,
+  "msg": "OK",
+  "data": {
+    "id": 37,
+    "username": "xxx",
+    "password": "123",
+    "phone": "12121212121",
+    "email": "kjhk@163.com",
+    "created": 1554995896000,
+    "updated": 1554995896000
+  }
+}

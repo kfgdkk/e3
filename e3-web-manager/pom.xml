@@ -99,13 +99,13 @@
                 </configuration>
             </plugin>
             <!-- jetty嵌入式servlet容器 -->
-            <!--<plugin>
+            <plugin>
                 <groupId>org.eclipse.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
                 <version>9.4.0.v20161208</version>
                 <configuration>
                     <httpConnector>
-                        &lt;!&ndash;端口号&ndash;&gt;
+                        <!--端口号-->
                         <port>8080</port>
                     </httpConnector>
                     <scanIntervalSeconds>10</scanIntervalSeconds>
@@ -113,7 +113,7 @@
                         <contextPath>/e3-web-manager</contextPath>
                     </webApp>
                 </configuration>
-            </plugin>-->
+            </plugin>
             <!-- 配置Tomcat插件 -->
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
